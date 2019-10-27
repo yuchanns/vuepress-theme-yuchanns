@@ -1,0 +1,56 @@
+{
+  "name": "vuepress-theme-yuchanns",
+  "version": "0.0.1",
+  "description": "vuepress blog theme - yuchanns",
+  "keywords": [
+    "blog",
+    "theme",
+    "vuepress"
+  ],
+  "homepage": "https://github.com/yuchanns/vuepress-theme-yuchanns",
+  "bugs": {
+    "url": "https://github.com/yuchanns/vuepress-theme-yuchanns/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuchanns/vuepress-theme-yuchanns.git"
+  },
+  "license": "MIT",
+  "author": "yuchanns <airamusume@gmail.com>",
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "vuepress build docs --dest docs-dist",
+    "dev": "vuepress dev docs --no-cache --temp .temp",
+    "lint": "eslint --fix --ext .js,.vue lib docs"
+  },
+  "peerDependencies": {
+    "vuepress": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "vuepress": "^1.2.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/vue-fontawesome": "^0.1.7",
+    "@vssue/api-github-v3": "^1.1.2",
+    "@vssue/vuepress-plugin-vssue": "^1.2.0",
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "date-fns": "^2.6.0",
+    "vuepress-plugin-container": "^2.1.0",
+    "vuepress-plugin-nprogress": "^1.1.4",
+    "vuepress-plugin-serve": "^1.1.0",
+    "vuepress-plugin-smooth-scroll": "^0.0.7",
+    "vuepress-plugin-zooming": "^1.1.5"
+  }
+}
