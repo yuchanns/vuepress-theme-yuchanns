@@ -37,13 +37,6 @@ jobs:
       - run:
           name: Lint Code
           command: yarn lint
-  test-cover:
-    executor: node
-    steps:
-      - install
-      - run:
-          name: Test CodeCov
-          command: yarn codecov
 
 workflows:
   version: 2
@@ -51,4 +44,3 @@ workflows:
     jobs:
       - lint
       - build
-      - test-cover

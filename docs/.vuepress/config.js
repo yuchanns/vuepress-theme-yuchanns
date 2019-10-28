@@ -15,6 +15,11 @@ module.exports = {
 
   themeConfig: {
     lang: 'en-US',
-    favicon: '/favicon.png'
+    favicon: '/favicon.png',
+    personalInfo: {
+      name: 'yuchanns',
+      class: 'Web Developer',
+      avatar: 'https://avatars3.githubusercontent.com/u/25029451'
+    }
   }
 }
