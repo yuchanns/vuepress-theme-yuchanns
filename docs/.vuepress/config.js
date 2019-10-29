@@ -11,11 +11,15 @@ module.exports = {
     }
   },
 
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
+
   theme: path.resolve(__dirname, '../../lib'),
 
   themeConfig: {
     lang: 'en-US',
-    favicon: '/favicon.png',
+    logo: '/logo.png',
     personalInfo: {
       name: 'yuchanns',
       class: 'Web Developer',

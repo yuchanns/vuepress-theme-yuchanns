@@ -22,7 +22,7 @@
             <h1 class="header__logo">
               <router-link to="/test" class="header-top-logo__link">
                 <img itemprop="logo"
-                  :src="$site.themeConfig.favicon"
+                  :src="$site.themeConfig.logo"
                   height="47px"
                   width="50px"
                   alt="Blog yuchanns'Atelier">
@@ -375,11 +375,21 @@ img
   z-index 5
 
 .layout-main
-  .container-fluid
+  >.container-fluid
     background-color: $bgColor
 
 .container
+.container *
+.container-fluid
 .container-fluid *
+.container-fluid:after
+.container-fluid :after
+.container-fluid:before
+.container-fluid :before
+.container:after
+.container :after
+.container:before
+.container :before
   box-sizing: border-box
 
 .container
@@ -392,6 +402,8 @@ img
 
 .container-fluid
   padding: .4px
+  @media (max-width 576px)
+    padding 0
 
 .main
   width: 100%
@@ -401,9 +413,6 @@ img
 
   @media (min-width: 1500px)
     max-width: 1500px
-
-.go-to-top
-  color $primaryColor!important
 
 .footer
   position relative
@@ -427,6 +436,10 @@ img
       font-size $mediumText
     &__box
       text-align right
+      &--1.column
+        @media (max-width 576px)
+          text-align left
+          padding-left 5vw!important
   &-nav1
   &-nav2
     margin-top 10px
@@ -439,6 +452,10 @@ img
         width 85%
         padding 6px 4px
         margin-bottom 3px
+  &-nav1
+    &__item
+      a
+        float left
   
   &-copy
     color #fff
@@ -446,9 +463,16 @@ img
     text-align right
     padding-top 50px
     padding-right 4vw!important
+    @media (max-width 576px)
+      order 3
+      text-align center
+      padding-top 10px
 
   &-card
     position relative
+    @media (max-width 576px)
+      order 2
+      margin 40px 0
 
   &__card-author
     position relative
@@ -474,6 +498,9 @@ img
     background-color $secondFooterColor
     bottom -2px
 
+    @media (max-width 576px)
+      height 110px
+
     .footer-box__shape
       fill $firstFooterColor
 
@@ -494,6 +521,11 @@ img
       margin-left 30px
       z-index 2
       position relative
+      @media (max-width 576px)
+        position relative
+        left 50%
+        margin-top 5%
+        transform translateX(-50%)
 
     &__item
       display inline
@@ -752,6 +784,8 @@ img
           color #000
         .text
           font-size $smallText
+      &.column
+        padding-left 15px!important
     &-social
       &__list
         margin-left -12px
