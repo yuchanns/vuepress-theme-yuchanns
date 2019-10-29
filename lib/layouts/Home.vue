@@ -231,20 +231,86 @@
                         <span itemprop="jobTitle" class="meta-text">
                           {{$site.themeConfig.personalInfo.class}}
                         </span>
-                        <router-link to="/test"   
-                          class="card-author__link"
-                          itemprop="url">
-                          <h3 itemprop="name" class="card-author-info__title">{{$site.themeConfig.personalInfo.name}}</h3>
-                        </router-link>
+                      </div>
+                      <router-link to="/test"   
+                        class="card-author__link"
+                        itemprop="url">
+                        <h3 itemprop="name" class="card-author-info__title">{{$site.themeConfig.personalInfo.name}}</h3>
+                      </router-link>
+                      <div class="card-author-info__joined">
+                        <span class="icon">enter</span>
+                        <span class="text">Joined 1 year ago</span>
+                        <span 
+                          itemprop="alternateName"
+                          class="text meta-text--primary">
+                          (3 Posts)
+                        </span>
+                      </div>
+                      <div class="card-author-social">
+                        <ul class="card-author-social__list">
+                          <li class="card-author-social__item">
+                            <a
+                              itemprop="sameAs"
+                              href="https://twitter.com/airamusume"
+                              rel="nofollow noopener"
+                              target="_blank"
+                              class="card-author-social__link">
+                                <span class="icon card-author-social__icon icon-twitter">twitter</span>
+                              </a>
+                          </li>
+                          <li class="card-author-social__item">
+                            <a
+                              itemprop="sameAs"
+                              href="https://github.com/yuchanns"
+                              rel="nofollow noopener"
+                              target="_blank"
+                              class="card-author-social__link">
+                                <span class="icon card-author-social__icon icon-github">github</span>
+                              </a>
+                          </li>
+                          <li class="card-author-social__item">
+                            <a
+                              itemprop="sameAs"
+                              href="https://www.yuchanns.xyz"
+                              rel="nofollow noopener"
+                              target="_blank"
+                              class="card-author-social__link">
+                                <span class="icon card-author-social__icon icon-site">site</span>
+                              </a>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="watermark-logo"></div>
               </div>
             </div>
-            <div class="column sm-50 footer-nav"></div>
-            <div class="column sm-100 footer-copy"></div>
+            <div class="column sm-50 footer-nav">
+              <div class="row justify-right">
+                <div class="column xs-50 sm-40 md-33 footer-nav__box footer-nav__box--1">
+                  <h2 class="meta-text title">{{$site.title}}</h2>
+                  <nav class="footer-nav1">
+                    <ul>
+                      <li class="footer-nav1__item">
+                        <router-link to="/test">ABOUT</router-link>
+                      </li>
+                      <li class="footer-nav1__item">
+                        <router-link to="/test">CATEGORIES</router-link>
+                      </li>
+                      <li class="footer-nav1__item">
+                        <router-link to="/test">CONTACT</router-link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="column sm-100 footer-copy">
+              2019 © {{$site.title}} - <a href="https://vuepress.vuejs.org/">MADE WITH VUEPRESS</a>
+            </div>
           </div>
+          <span class="shapes shapes--circle" style="left: 3%; top: -20%"></span> <span class="shapes shapes--primary shapes--color3" style="left: 30%; top: -15%"></span> <span class="shapes shapes--primary" style="left: 13%; top: -80%; transform: rotate(45deg)"></span> <span class="shapes shapes--circle shapes--color4" style="left: 40%; top: 200px"></span> <span class="shapes shapes--primary" style="left: 15%; bottom: 10%; transform: rotate(75deg)"></span> <span class="shapes shapes--circle shapes--color3" style="right: 50%; top: 30%"></span> <span class="shapes shapes--primary" style="right: 20%; top: -100%"></span> <span class="shapes shapes--circle" style="right: 10%; top: -20%"></span> <span class="shapes shapes--color4" style="right: 35%; top: -20%; transform: rotate(45deg)"></span> <span class="shapes shapes--circle" style="left: 40%; top: -50%"></span> <span class="shapes shapes--color3" style="right: 30%; top: 20%"></span> <span class="shapes shapes--circle shapes--primary" style="right: 30%; bottom: 20%"></span>
         </section>
       </footer>
     </div>
@@ -297,6 +363,17 @@ img
     background-color: $bgColor
     overflow: hidden
 
+.watermark-logo
+  position absolute
+  top -150px
+  left -30px
+  width 472px
+  height 429px
+  background-image url(/watermark-logo.png)
+  background-size cover
+  background-repeat no-repeat
+  z-index 5
+
 .layout-main
   .container-fluid
     background-color: $bgColor
@@ -325,13 +402,43 @@ img
   @media (min-width: 1500px)
     max-width: 1500px
 
+.go-to-top
+  color $primaryColor!important
+
 .footer
   position relative
   overflow hidden
 
+  &-copy
+    color #fff
+    font-size 11px
+    text-align right
+    padding-top 50px
+    padding-right 4vw!important
+
   &-nav
     padding-right 4vw!important
     z-index 6
+    @media (max-width 576px)
+      order 1
+    .title
+      color #fff
+      font-weight 700
+      font-size $mediumText
+    &__box
+      text-align right
+  &-nav1
+  &-nav2
+    margin-top 10px
+    &__item
+      font-size $smallText
+      color #fff
+      a
+        float right
+        display block
+        width 85%
+        padding 6px 4px
+        margin-bottom 3px
   
   &-copy
     color #fff
@@ -353,10 +460,11 @@ img
   &-box2
   &-box3
     position relative
-
   &-box1
     height 175px
     top 4px
+    @media (min-width 1200px)
+      height 249px
 
     .footer-box__shape
       fill $secondFooterColor
@@ -428,6 +536,8 @@ img
   margin: 0
   display: flex
   flex-wrap: wrap
+  &.justify-right
+    justify-content flex-end
 
 .header-top
   position: relative
@@ -489,6 +599,9 @@ img
     &.sm-100
       flex: 0 0 100%
       max-width: 100%
+    &.sm-40
+      flex 0 0 40%
+      max-width 40%
 
 @media (min-width: 48rem)
   .column
@@ -571,10 +684,17 @@ img
 [class*=icon-]
   transition: color .5s
 
+.icon
 [class*=" icon-"]
 [class^=icon-]
+  font-family ktquez!important
+  position relative
+  speak none
+  font-style normal
+  font-weight 400
   line-height: 1
   text-transform: none
+  letter-spacing 0
 
 .page
   margin-top: 50px
@@ -621,6 +741,27 @@ img
       max-width 120px
       max-height 120px
       border-radius 50%
+    &-info
+      &__joined
+        color $textColor
+        font-size $mediumText
+        margin-top 2px
+        .icon
+          top 5px
+          font-size $regularText
+          color #000
+        .text
+          font-size $smallText
+    &-social
+      &__list
+        margin-left -12px
+      &__item
+        display inline-flex
+        margin-right 2px
+      &__link
+        padding 8px 10px
+      &__icon
+        font-size $title3
 
   &.box-default
     padding-bottom: 0
@@ -748,4 +889,23 @@ img
     .bullet
       margin-right 4px
       top -1px
+
+.shapes
+  position absolute
+  width 20px
+  height 20px
+  border-style solid
+  border-width 1px
+  border-color #fff
+  z-index 1
+  
+  &--circle
+    border-radius 50%
+  &--color3
+    border-color $color3
+  &--color4
+    border-color $color4
+  &--primary
+    border-color $primaryColor
+
 </style>
