@@ -1,0 +1,141 @@
+@import "~@theme/styles/config.styl"
+
+.icon
+  text-transform none
+  line-height 1
+
+.icon
+[class*=icon-]
+  font-family ktquez!important
+  position relative
+  speak none
+  font-style normal 
+  font-weight 400
+  font-variant normal 
+  text-transform none 
+  line-height 1
+  letter-spacing 0
+
+[class*=icon-]
+  transition color .5s
+
+.icon
+[class*=" icon-"]
+[class^=icon-]
+  font-family ktquez!important
+  position relative
+  speak none
+  font-style normal
+  font-weight 400
+  line-height 1
+  text-transform none
+  letter-spacing 0
+
+.column
+  flex 0 0 100%
+  padding-left .9375rem
+  padding-right .9375rem
+
+  &.xs-33
+    flex 0 0 33.33333%
+    max-width 33.33333%
+
+  &.xs-50
+    flex 0 0 50%
+    max-width 50%
+
+  &.xs-67
+    flex 0 0 66.66667%
+    max-width 66.66667%
+
+  .column
+    padding-right 0
+    padding-left 0
+
+  @media (min-width: 36rem)
+    &.sm-20
+      flex: 0 0 20%
+      max-width: 20%
+    &.sm-40
+      flex 0 0 40%
+      max-width 40%
+    &.sm-50
+      flex 0 0 50%
+      max-width 50%
+    &.sm-60
+      flex: 0 0 60%
+      max-width: 60%
+    &.sm-100
+      flex: 0 0 100%
+      max-width: 100%
+
+  @media (max-width 36rem)
+    &.sm-20
+      flex 0 0 20%
+      max-width 20%
+    // &.sm-40
+    //   flex 0 0 40%
+    //   max-width 40%
+    // &.sm-50
+    //   flex 0 0 50%
+    //   max-width 50%
+    &.sm-60
+      flex 0 0 60%
+      max-width 60%
+    // &.sm-100
+    //   flex 0 0 100%
+    //   max-width 100%
+
+  @media (min-width 48rem)
+    flex 1
+    &.md-33
+      flex 0 0 33.33333%
+      max-width 33.33333%
+    &.md-50
+      flex: 0 0 50%
+      max-width: 50%
+    &.md-67
+      flex 0 0 66.66667%
+      max-width: 66.66667%
+
+  @media (max-width $max-tablet)
+    padding-right: 0!important
+    padding-left: 0!important
+
+.row
+  margin 0
+  display flex
+  flex-wrap wrap
+
+.card
+  display: flex
+
+.box-default
+  border-radius: 20px
+  padding: 16px 20px
+  box-shadow: 1px 1px 99px $shadowColor
+  background-color: #fff
+  border: 1px solid #fff
+
+.bullet
+  position: relative
+  border-radius: 50%
+  width: 8px
+  height: 8px
+  display: inline-block
+  background-color $primaryColor
+
+  &--small 
+    width 6px
+    height 6px
+
+  &--primary
+    background-color $colorPrimary
+
+.meta-text
+  font-size: $smallText
+  text-transform: uppercase
+  font-weight: 400
+
+  &--primary
+    color $primaryColor

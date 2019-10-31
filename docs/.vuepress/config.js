@@ -21,8 +21,8 @@ module.exports = {
     lang: 'en-US',
     logo: '/logo.png',
     personalInfo: {
-      name: 'yuchanns',
-      class: 'Web Developer',
+      nickname: 'yuchanns',
+      jobTitle: 'Web Developer',
       avatar: 'https://avatars3.githubusercontent.com/u/25029451'
     }
   }
