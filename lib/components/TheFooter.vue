@@ -125,6 +125,7 @@ export default {
   
   computed: {
     totalPosts () {
+      console.log(this.$site.pages)
       return this.$site.pages.length
     }
   }
