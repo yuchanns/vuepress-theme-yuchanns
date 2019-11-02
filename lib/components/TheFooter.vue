@@ -6,13 +6,14 @@
     <div class="footer-box2">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1366 246" class="footer-box__shape"><path d="M-1505.5-4725.5v-238.1c8.149-3.133,18.138-5.059,29.672-5.9h30.954c201.21,11.667,696.6,224.535,855.572,236.458,205.129,15.385,287.179-164.1,432.047-175.625a42.381,42.381,0,0,1,16.756,1.857V-4725.5Z" transform="translate(1506 4971)"></path></svg>
       <ul class="footer-social__list">
-        <li class="footer-social__item">
-          <a href="https://www.github.com/yuchanns"
+        <li class="footer-social__item" v-if="github">
+          <a 
+            :href="github.link"
             target="_blank" 
             rel="noopener external"
             title="Follow me on Github">
-              <span class="icon footer-social__icon">github</span>
-            </a>
+            <span class="icon footer-social__icon">github</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -52,30 +53,33 @@
                   </div>
                   <div class="card-author-social">
                     <ul class="card-author-social__list">
-                      <li class="card-author-social__item">
+                      <li class="card-author-social__item" 
+                        v-if="twitter">
                         <a
                           itemprop="sameAs"
-                          href="https://twitter.com/airamusume"
+                          :href="twitter.link"
                           rel="nofollow noopener"
                           target="_blank"
                           class="card-author-social__link">
                             <span class="icon card-author-social__icon icon-twitter">twitter</span>
                           </a>
                       </li>
-                      <li class="card-author-social__item">
+                      <li class="card-author-social__item" 
+                        v-if="github">
                         <a
                           itemprop="sameAs"
-                          href="https://github.com/yuchanns"
+                          :href="github.link"
                           rel="nofollow noopener"
                           target="_blank"
                           class="card-author-social__link">
                             <span class="icon card-author-social__icon icon-github">github</span>
                           </a>
                       </li>
-                      <li class="card-author-social__item">
+                      <li class="card-author-social__item"
+                        v-if="site">
                         <a
                           itemprop="sameAs"
-                          href="https://www.yuchanns.xyz"
+                          :href="site.link"
                           rel="nofollow noopener"
                           target="_blank"
                           class="card-author-social__link">
@@ -133,7 +137,20 @@ export default {
       return new Date().getFullYear()
     },
     distance () {
-      return formatDistance(parseISO(this.$themeConfig.personalInfo.joined), new Date())
+      return formatDistance(
+        parseISO(this.$themeConfig.personalInfo.joined),
+        new Date(),
+        { addSuffix: true }
+      )
+    },
+    github () {
+      return this.$themeConfig.personalInfo.sns.github || false
+    },
+    twitter () {
+      return this.$themeConfig.personalInfo.sns.twitter || false
+    },
+    site () {
+      return this.$themeConfig.personalInfo.sns.site || false
     }
   },
 }
@@ -141,6 +158,17 @@ export default {
 
 <style lang="stylus" scoped>
 @import "~@theme/styles/common.styl"
+
+.icon
+  &-twitter
+    &:hover
+      color #1da1f2
+  &-github
+    &:hover
+      color #239a3b
+  &-site
+    &:hover
+      color $primaryColor
 
 .footer
   position relative
@@ -152,6 +180,8 @@ export default {
     text-align right
     padding-top 50px
     padding-right 4vw
+    a:hover
+      color #3eaf7c
 
   &-nav
     padding-right 4vw
@@ -180,6 +210,9 @@ export default {
         width 85%
         padding 6px 4px
         margin-bottom 3px
+        &:hover
+          text-decoration underline
+          color #fff
   &-nav1
     &__item
       a
@@ -269,6 +302,9 @@ export default {
     position relative
     max-height 150px
     max-width 500px
+    &__link
+      &:hover
+        color $primaryColor
     &--no-shadow
       &.box-default
         box-shadow none

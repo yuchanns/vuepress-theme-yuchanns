@@ -24,7 +24,18 @@ module.exports = {
       nickname: 'yuchanns',
       jobTitle: 'Web Developer',
       avatar: 'https://avatars3.githubusercontent.com/u/25029451',
-      joined: '2017-10-01'
+      joined: '2017-10-01',
+      sns: {
+        github: {
+          link: 'https://www.github.com/yuchanns'
+        },
+        twitter: {
+          link: 'https://www.twitter.com/airamusume'
+        },
+        site: {
+          link: 'https://www.yuchanns.xyz'
+        }
+      }
     }
   }
 }

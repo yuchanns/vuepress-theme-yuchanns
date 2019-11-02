@@ -6,13 +6,13 @@
           <div class="card__box1 card__box1--top">
             <header>
               <div class="card-category">
-                <router-link to="/test" class="card-category__link">
+                <router-link to="/test/test" class="card-category__link">
                   <span class="bullet no_bw"></span>
                   <span class="meta-text">Golang</span>
                 </router-link>
               </div>
               <div class="card-cover">
-                <router-link to="/test">
+                <router-link to="/test/test">
                   <picture>
                     <img
                       src="/golang-study.jpeg"
@@ -21,7 +21,7 @@
                   </picture>
                 </router-link>
               </div>
-              <router-link to="/test" class="card-title">
+              <router-link to="/test/test" class="card-title">
                 <h2 class="card-title__text">Go语言学习笔记</h2>
               </router-link>
             </header>
@@ -36,7 +36,7 @@
                 </ul>
               </div>
               <div class="column xs-50">
-                <router-link to="/test" class="card-readmore">
+                <router-link to="/test/test" class="card-readmore">
                   <span class="card-readmore__text">see post</span>
                   <span class="icon card-readmore__icon icon--arrow">arrow</span>
                 </router-link>
@@ -52,11 +52,11 @@
               <div class="card__box1 card__box--false">
                 <header>
                   <div class="card-category">
-                    <router-link to="/test" class="card-category__link">
+                    <router-link to="/test/test" class="card-category__link">
                       <span class="bullet no_bw"></span>
                       <span class="meta-text">算法</span>
                     </router-link>
-                    <router-link to="/test" class="card-title">
+                    <router-link to="/test/test" class="card-title">
                       <h2 class="card-title__text">茴字的四种写法-KMP算法</h2>
                     </router-link>
                   </div>
@@ -70,7 +70,7 @@
                     </ul>
                   </div>
                   <div class="column xs-50">
-                    <router-link to="/test" class="card-readmore">
+                    <router-link to="/test/test" class="card-readmore">
                       <span class="card-readmore__text">see post</span>
                       <span class="icon card-readmore__icon icon--arrow">arrow</span>
                     </router-link>
@@ -84,11 +84,11 @@
               <div class="card__box1 card__box--false">
                 <header>
                   <div class="card-category">
-                    <router-link to="/test" class="card-category__link">
+                    <router-link to="/test/test" class="card-category__link">
                       <span class="bullet no_bw"></span>
                       <span class="meta-text">swoole</span>
                     </router-link>
-                    <router-link to="/test" class="card-title">
+                    <router-link to="/test/test" class="card-title">
                       <h2 class="card-title__text">协程下的mysql连接池实现分析</h2>
                     </router-link>
                   </div>
@@ -102,7 +102,7 @@
                     </ul>
                   </div>
                   <div class="column xs-50">
-                    <router-link to="/test" class="card-readmore">
+                    <router-link to="/test/test" class="card-readmore">
                       <span class="card-readmore__text">see post</span>
                       <span class="icon card-readmore__icon icon--arrow">arrow</span>
                     </router-link>
@@ -130,19 +130,19 @@
             <nav class="categories">
               <ul class="categories__list">
                 <li class="categories__item">
-                  <router-link to="/test" class="categories__link">
+                  <router-link to="/test/test" class="categories__link">
                     <span class="bullet no_bw bullet--small"></span>
                     <span class="meta-text">Golang</span>
                   </router-link>
                 </li>
                 <li class="categories__item">
-                  <router-link to="/test" class="categories__link">
+                  <router-link to="/test/test" class="categories__link">
                     <span class="bullet no_bw bullet--small"></span>
                     <span class="meta-text">算法</span>
                   </router-link>
                 </li>
                 <li class="categories__item">
-                  <router-link to="/test" class="categories__link">
+                  <router-link to="/test/test" class="categories__link">
                     <span class="bullet no_bw bullet--small"></span>
                     <span class="meta-text">swoole</span>
                   </router-link>
