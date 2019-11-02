@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import "~@theme/styles/base.styl"
+@import "~@theme/styles/common.styl"
 
 .layout-main
   >.container-fluid

@@ -1,5 +1,65 @@
 @import "~@theme/styles/config.styl"
 
+@font-face {
+  font-family 'ktquez'
+  src  url('../fonts/icons/ktquez.eot?5awxug')
+  src  url('../fonts/icons/ktquez.eot?5awxug#iefix') format('embedded-opentype'),
+    url('../fonts/icons/ktquez.ttf?5awxug') format('truetype'),
+    url('../fonts/icons/ktquez.woff?5awxug') format('woff'),
+    url('../fonts/icons/ktquez.svg?5awxug#ktquez') format('svg')
+  font-weight normal
+  font-style normal
+}
+
+*
+  margin 0
+  padding 0
+
+body
+  color $textColor
+  overflow-x hidden
+  background-color $bgColor
+
+a
+  text-decoration none
+  color inherit
+
+  &:hover
+    color $accentColor
+
+  &:active
+    color $primaryColor  
+
+abbr
+  text-decoration none
+
+ul, ol
+  list-style-type none
+
+img.cover
+  position relative
+  display flex
+  width 100%
+  line-height 1em 
+  text-align center
+  background-color white
+  overflow hidden
+
+  &:after
+    content ""
+    background-image url('/fallback.png')
+    background-size 80px
+    background-position center
+    background-repeat no-repeat
+    background-color $colorImageFallback
+    font-size 14px
+    position absolute
+    z-index 2
+    top 0
+    left 0
+    width 100%
+    height 100%
+
 .icon
   text-transform none
   line-height 1
@@ -54,8 +114,8 @@
 
   @media (min-width: 36rem)
     &.sm-20
-      flex: 0 0 20%
-      max-width: 20%
+      flex 0 0 20%
+      max-width 20%
     &.sm-40
       flex 0 0 40%
       max-width 40%
@@ -63,11 +123,11 @@
       flex 0 0 50%
       max-width 50%
     &.sm-60
-      flex: 0 0 60%
-      max-width: 60%
+      flex 0 0 60%
+      max-width 60%
     &.sm-100
-      flex: 0 0 100%
-      max-width: 100%
+      flex 0 0 100%
+      max-width 100%
 
   @media (max-width 36rem)
     &.sm-20
@@ -92,15 +152,15 @@
       flex 0 0 33.33333%
       max-width 33.33333%
     &.md-50
-      flex: 0 0 50%
-      max-width: 50%
+      flex 0 0 50%
+      max-width 50%
     &.md-67
       flex 0 0 66.66667%
-      max-width: 66.66667%
+      max-width 66.66667%
 
   @media (max-width $max-tablet)
-    padding-right: 0!important
-    padding-left: 0!important
+    padding-right 0!important
+    padding-left 0!important
 
 .row
   margin 0
@@ -108,21 +168,21 @@
   flex-wrap wrap
 
 .card
-  display: flex
+  display flex
 
 .box-default
-  border-radius: 20px
-  padding: 16px 20px
-  box-shadow: 1px 1px 99px $shadowColor
-  background-color: #fff
-  border: 1px solid #fff
+  border-radius 20px
+  padding 16px 20px
+  box-shadow 1px 1px 99px $shadowColor
+  background-color #fff
+  border 1px solid #fff
 
 .bullet
-  position: relative
-  border-radius: 50%
-  width: 8px
-  height: 8px
-  display: inline-block
+  position relative
+  border-radius 50%
+  width 8px
+  height 8px
+  display inline-block
   background-color $primaryColor
 
   &--small 
@@ -133,9 +193,20 @@
     background-color $colorPrimary
 
 .meta-text
-  font-size: $smallText
-  text-transform: uppercase
-  font-weight: 400
+  font-size $smallText
+  text-transform uppercase
+  font-weight 400
 
   &--primary
     color $primaryColor
+
+.page
+  margin-top 50px
+
+.reset-button
+.reset-input
+  background-color transparent
+  border none
+
+.mt-30
+  margin-top 30px

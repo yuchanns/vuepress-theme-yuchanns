@@ -23,7 +23,8 @@ module.exports = {
     personalInfo: {
       nickname: 'yuchanns',
       jobTitle: 'Web Developer',
-      avatar: 'https://avatars3.githubusercontent.com/u/25029451'
+      avatar: 'https://avatars3.githubusercontent.com/u/25029451',
+      joined: '2017-10-01'
     }
   }
 }

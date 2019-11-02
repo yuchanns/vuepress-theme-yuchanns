@@ -51,54 +51,54 @@ export default {
     background-color #fff
     
     @media (max-width $mobile)
-      top: 0
-      left: 0
+      top 0
+      left 0
     
     &__hamburguer
-      transform: rotate(90deg)
+      transform rotate(90deg)
 
   &__logo
-    text-align: center
+    text-align center
 
 .hamburguer
-  width: 44px
-  height: 44px
-  cursor: pointer
+  width 44px
+  height 44px
+  cursor pointer
   &__wrapper
-    width: 30px
-    position: relative
-    left: 50%
-    top: 12px
-    margin-left: -15px
-    transition: .5s ease-in-out
-    transform: rotate(0deg)
+    width 30px
+    position relative
+    left 50%
+    top 12px
+    margin-left -15px
+    transition .5s ease-in-out
+    transform rotate(0deg)
   &__line
-    display: block
-    position: absolute
-    height: 5px
-    width: 100%
-    background-color: $primaryColor
-    border-radius: 50px
-    opacity: 1
-    left: 0
-    transition: .25s ease-in-out
-    transform: rotate(0deg)
+    display block
+    position absolute
+    height 5px
+    width 100%
+    background-color $primaryColor
+    border-radius 50px
+    opacity 1
+    left 0
+    transition .25s ease-in-out
+    transform rotate(0deg)
     &:first-child
-      top: 0
+      top 0
     &:nth-child(2)
-      top: 8px
-      width: 60%
+      top 8px
+      width 60%
     &:nth-child(3)
-      top: 16px
-      width: 80%
+      top 16px
+      width 80%
 
 .search
 .search__icon
-  position: relative
+  position relative
 
 .search
   &__icon
-    float: right
-    padding: 10px
-    cursor: pointer
+    float right
+    padding 10px
+    cursor pointer
 </style>

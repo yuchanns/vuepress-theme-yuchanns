@@ -43,7 +43,7 @@
                   </router-link>
                   <div class="card-author-info__joined">
                     <span class="icon">enter</span>
-                    <span class="text">Joined 1 year ago</span>
+                    <span class="text">Joined {{ distance }}</span>
                     <span 
                       itemprop="alternateName"
                       class="text meta-text--primary">
@@ -111,7 +111,7 @@
           </div>
         </div>
         <div class="column sm-100 footer-copy">
-          2019 © {{$site.title}} - <a href="https://vuepress.vuejs.org/">MADE WITH VUEPRESS</a>
+          {{ year }} © {{$site.title}} - <a href="https://vuepress.vuejs.org/">MADE WITH VUEPRESS</a>
         </div>
       </div>
       <span class="shapes shapes--circle" style="left: 3%; top: -20%"></span> <span class="shapes shapes--primary shapes--color3" style="left: 30%; top: -15%"></span> <span class="shapes shapes--primary" style="left: 13%; top: -80%; transform: rotate(45deg)"></span> <span class="shapes shapes--circle shapes--color4" style="left: 40%; top: 200px"></span> <span class="shapes shapes--primary" style="left: 15%; bottom: 10%; transform: rotate(75deg)"></span> <span class="shapes shapes--circle shapes--color3" style="right: 50%; top: 30%"></span> <span class="shapes shapes--primary" style="right: 20%; top: -100%"></span> <span class="shapes shapes--circle" style="right: 10%; top: -20%"></span> <span class="shapes shapes--color4" style="right: 35%; top: -20%; transform: rotate(45deg)"></span> <span class="shapes shapes--circle" style="left: 40%; top: -50%"></span> <span class="shapes shapes--color3" style="right: 30%; top: 20%"></span> <span class="shapes shapes--circle shapes--primary" style="right: 30%; bottom: 20%"></span>
@@ -120,15 +120,22 @@
 </template>
 
 <script>
+import { formatDistance, parseISO } from 'date-fns'
+
 export default {
   name: 'TheFooter',
   
   computed: {
     totalPosts () {
-      console.log(this.$site.pages)
       return this.$site.pages.length
+    },
+    year () {
+      return new Date().getFullYear()
+    },
+    distance () {
+      return formatDistance(parseISO(this.$themeConfig.personalInfo.joined), new Date())
     }
-  }
+  },
 }
 </script>
 
