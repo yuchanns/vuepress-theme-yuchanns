@@ -44,6 +44,7 @@
     "@vssue/vuepress-plugin-vssue": "^1.2.0",
     "@vuepress/plugin-back-to-top": "^1.2.0",
     "date-fns": "^2.6.0",
+    "lodash": "^4.17.15",
     "vuepress-plugin-container": "^2.1.0",
     "vuepress-plugin-nprogress": "^1.1.4",
     "vuepress-plugin-serve": "^1.1.0",
