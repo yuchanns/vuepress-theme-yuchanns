@@ -7,7 +7,7 @@
             <header>
               <div class="card-category">
                 <router-link to="/test/test" class="card-category__link">
-                  <span class="bullet no_bw"></span>
+                  <bullet type="Golang" />
                   <span class="meta-text">Golang</span>
                 </router-link>
               </div>
@@ -53,7 +53,7 @@
                 <header>
                   <div class="card-category">
                     <router-link to="/test/test" class="card-category__link">
-                      <span class="bullet no_bw"></span>
+                      <bullet type="算法" />
                       <span class="meta-text">算法</span>
                     </router-link>
                     <router-link to="/test/test" class="card-title">
@@ -85,7 +85,7 @@
                 <header>
                   <div class="card-category">
                     <router-link to="/test/test" class="card-category__link">
-                      <span class="bullet no_bw"></span>
+                      <bullet type="swoole" />
                       <span class="meta-text">swoole</span>
                     </router-link>
                     <router-link to="/test/test" class="card-title">
@@ -131,19 +131,19 @@
               <ul class="categories__list">
                 <li class="categories__item">
                   <router-link to="/test/test" class="categories__link">
-                    <span class="bullet no_bw bullet--small"></span>
+                    <bullet type="small" />
                     <span class="meta-text">Golang</span>
                   </router-link>
                 </li>
                 <li class="categories__item">
                   <router-link to="/test/test" class="categories__link">
-                    <span class="bullet no_bw bullet--small"></span>
+                    <bullet type="small" />
                     <span class="meta-text">算法</span>
                   </router-link>
                 </li>
                 <li class="categories__item">
                   <router-link to="/test/test" class="categories__link">
-                    <span class="bullet no_bw bullet--small"></span>
+                    <bullet type="small" />
                     <span class="meta-text">swoole</span>
                   </router-link>
                 </li>
@@ -157,8 +157,14 @@
 </template>
 
 <script>
+import Bullet from '@theme/components/Bullet'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+
+  components: {
+    Bullet
+  }
 }
 </script>
 

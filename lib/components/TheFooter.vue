@@ -32,7 +32,7 @@
                 </div>
                 <div class="column xs-67 card-author-info">
                   <div class="card-author-info__role">
-                    <span class="bullet no_bw bullet--primary bullet--undefined"></span>
+                    <Bullet type="primary" />
                     <span itemprop="jobTitle" class="meta-text">
                       {{$site.themeConfig.personalInfo.jobTitle}}
                     </span>
@@ -125,9 +125,14 @@
 
 <script>
 import { formatDistance, parseISO } from 'date-fns'
+import Bullet from '@theme/components/Bullet'
 
 export default {
   name: 'TheFooter',
+
+  components: {
+    Bullet
+  },
   
   computed: {
     totalPosts () {
