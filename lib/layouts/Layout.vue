@@ -48,7 +48,7 @@
                     <tags type="tags" />
                     <span class="tags">{{ tag }}</span>
                   </router-link>
-                  Created {{ page.frontmatter.created_at | formatDate }}
+                  Created {{ page.frontmatter.date | formatDate }}
                 </div>
               </div>
               <Pagination />
