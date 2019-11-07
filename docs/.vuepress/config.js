@@ -7,7 +7,14 @@ module.exports = {
 
   theme: path.resolve(__dirname, '../../lib'),
 
+  head: [
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }]
+  ],
+
   themeConfig: {
+    lang: {
+      home: 'Home'
+    },
     pagination: {
       lengthPerPage: 2
     }
