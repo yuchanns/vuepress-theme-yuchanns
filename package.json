@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.5.1",
+    "@vuepress/shared-utils": "^1.2.0",
     "eslint": "6.3.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",

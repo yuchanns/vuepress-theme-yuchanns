@@ -1,5 +1,5 @@
 <template>
-  <div class="pagination-container">
+  <div class="pagination-container" v-if="$pagination.hasPrev || $pagination.hasNext">
     <div class="btnGroup">
       <router-link
         :to="$pagination.prevLink"
