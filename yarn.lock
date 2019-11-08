@@ -909,6 +909,13 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
+"@vuepress/plugin-back-to-top@^1.0.0-rc.1":
+  version "1.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.0.0-rc.1.tgz#91fb693f3c7d7a9d8019842bb061ad756445e4ca"
+  integrity sha512-6XQfuNDLbfjOyxrVcgD09shPiFjc/YTkhAUMRrnkEfq1Uacaw9idr9BlCt+92Co3auIB15x7hsgyPr0es+PPNQ==
+  dependencies:
+    lodash.debounce "^4.0.8"
+
 "@vuepress/plugin-blog@^1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.5.1.tgz#c78420fc1c050dc3e75467f01e521651f77d4a1c"
@@ -7821,6 +7828,18 @@ vuepress-plugin-disqus-comment@^0.2.3:
   integrity sha512-M1oBosK3XkXnmFg2MIUI420VRSk7hF0QXXAiyTUVb7tzdzAjKnRLzRAvLcnrLrXq7XklV7wxTa7o6R7NdWlirg==
   dependencies:
     vue-disqus "^3.0.5"
+
+vuepress-plugin-nprogress@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-nprogress/-/vuepress-plugin-nprogress-1.1.4.tgz#63350d8521ff6c3f27bcc03ec6a7d496f3b70c07"
+  integrity sha512-z9Wbh9j0Muv54xdel4Ybc1BCuyXHAwO5U0NrKNBjd2WHQFavozOcxTgr4SVDbAHOKEJPTy8uUgY72mm7p8mfZQ==
+  dependencies:
+    nprogress "^0.2.0"
+
+vuepress-plugin-reading-progress@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-reading-progress/-/vuepress-plugin-reading-progress-1.0.7.tgz#9a278866b5280e447226579945eded3055ba48ce"
+  integrity sha512-XFnD42/Xt4ZQ3G0j1ViF2WmBJM7f+zYJLKfD2ZEkIq3Ar38c3FKR/LU94aENaWRGnfDMDmAMEYjLrcmR4uq49g==
 
 vuepress-plugin-sitemap@^2.3.0:
   version "2.3.0"
