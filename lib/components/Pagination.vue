@@ -19,7 +19,7 @@
         v-if="$pagination.hasNext">
         Next
       </router-link>
-      <button 
+      <button
         class="btn btn-outline btnGroup-item"
         disabled
         v-else>
@@ -65,7 +65,7 @@ export default {
   &:disabled
     color rgba(36,41,46,.4)
     background-color #eff3f6
-    background-image none 
+    background-image none
     border-color rgba(27,31,35,.2)
     box-shadow none
     cursor default
@@ -77,7 +77,7 @@ export default {
     &:hover
       color #fff
       background-color #0366d6
-      background-image none 
+      background-image none
       border-color #0366d6
     &.disabled
     &:disabled

@@ -24,7 +24,7 @@
                     <router-link :to="page.path">
                       <button class="btn btn-sm">
                         <tags
-                          type="eye" 
+                          type="eye"
                           class="mr-1"/>
                         <span class="text-capitalize">watch</span>
                       </button>
@@ -76,7 +76,7 @@ export default {
   filters: {
     stripTags (value) {
       const regex = /(<([^>]+)>)/ig
-      return value.replace(regex, "")
+      return value.replace(regex, '')
     },
     formatDate (value) {
       return formatDistanceToNow(parseISO(value), {
@@ -91,8 +91,8 @@ export default {
 .container
   &-xl
     max-width 852px
-    margin-right auto 
-    margin-left auto 
+    margin-right auto
+    margin-left auto
 
 .px-3
   padding-right 16px
@@ -155,7 +155,7 @@ export default {
   font-weight 600
   white-space nowrap
   vertical-align middle
-  user-select none 
+  user-select none
   background-repeat repeat-x
   background-position -1px -1px
   background-size 110% 110%
@@ -170,7 +170,7 @@ export default {
     border-color rgba(27,31,35,.35)
     text-decoration: none
     background-repeat: repeat-x
-  
+
   &-sm
     padding 3px 10px
     font-size 12px

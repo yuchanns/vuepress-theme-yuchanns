@@ -59,9 +59,9 @@ h6
   margin-top 0
   margin-bottom 0
 
-button 
-  font-family inherit 
-  text-transform none 
+button
+  font-family inherit
+  text-transform none
   overflow visible
   font inherit
   margin 0
