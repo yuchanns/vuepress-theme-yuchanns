@@ -48,7 +48,7 @@
                     <tags type="tags" />
                     <span class="tags">{{ tag }}</span>
                   </router-link>
-                  Created {{ page.frontmatter.date | formatDate }}
+                  Created {{ page.frontmatter.date | getDistanceToNow }}
                 </div>
               </div>
               <Pagination />
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import { formatDistanceToNow, parseISO } from 'date-fns'
+import { getDistanceToNow } from '@theme/utils/compare-time'
 import Tags from '@theme/components/icons/Tags'
 import Pagination from '@theme/components/Pagination'
 
@@ -78,37 +78,30 @@ export default {
       const regex = /(<([^>]+)>)/ig
       return value.replace(regex, '')
     },
-    formatDate (value) {
-      return formatDistanceToNow(parseISO(value), {
-        addSuffix: true
-      })
-    }
+    getDistanceToNow
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+@import '~@theme/styles/flexbox.styl'
+@import '~@theme/styles/padding.styl'
+@import '~@theme/styles/margin.styl'
+@import '~@theme/styles/border.styl'
+@import '~@theme/styles/display.styl'
+@import '~@theme/styles/button.styl'
+
 .container
   &-xl
     max-width 852px
     margin-right auto
     margin-left auto
 
-.px-3
-  padding-right 16px
-  padding-left 16px
-
-.ml-0
-  margin-left 0
-
-.mr
-  &-1
-    margin-right 4px
-  &-3
-    margin-right 16px
-
 .muted-link
   color #586069
+  &:hover
+    color $accentColor
+    text-decoration none
 
 .category-color
   position relative
@@ -121,14 +114,6 @@ export default {
 
 .tags
   margin-right 5px
-.mt
-  &-2
-    margin-top 8px
-  &-4
-    margin-top 24px
-
-.mb-1
-  margin-bottom 4px
 
 .col
   &-lg-12
@@ -146,90 +131,11 @@ export default {
   &-right
     float right
 
-.btn
-  color #242910
-  background-color #eff3f6
-  background-image linear-gradient(-180deg,#fafbfc,#eff3f6 90%)
-  position relative
-  display inline-block
-  font-weight 600
-  white-space nowrap
-  vertical-align middle
-  user-select none
-  background-repeat repeat-x
-  background-position -1px -1px
-  background-size 110% 110%
-  border 1px solid rgba(27,31,35,.2)
-  border-radius .25rem
-  cursor pointer
-
-  &:hover
-    background-color #e6ebf1
-    background-image linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%)
-    background-position -.5em
-    border-color rgba(27,31,35,.35)
-    text-decoration: none
-    background-repeat: repeat-x
-
-  &-sm
-    padding 3px 10px
-    font-size 12px
-    line-height 20px
-
-.pl
-  &-md-2
-    @media (min-width 768px)
-      padding-left 8px
-
-.pr-4
-  padding-right 24px
-
 .position-relative
   position relative
 
-.width
-  &-full
-    width 100%
-
-.py
-  &-1
-    padding-top 4px
-    padding-bottom 4px
-  &-4
-    padding-top 24px
-    padding-bottom 24px
-
 .f6
   font-size 12px
-
-.d
-  &-block
-    display block
-  &-inline-block
-    display inline-block
-  &-md-flex
-    @media (min-width 768px)
-      display flex
-  &-lg-flex
-    @media (min-width 1012px)
-      display flex
-
-.pb-3
-  padding-bottom 16px
-
-.flex
-  &-items-center
-    align-items center
-  &-justify-between
-    justify-content space-between
-  &-wrap
-    flex-wrap wrap
-
-.border
-  &-gray-dark
-    border-color #d1d5da
-  &-bottom
-    border-bottom 1px solid #e1e4e8
 
 .gutter-lg
   @media (min-width 1012px)
@@ -251,4 +157,12 @@ export default {
 
 .text-normal
   font-weight 400
+
+.btn
+  color #242910
+  background-color #eff3f6
+  background-image linear-gradient(-180deg,#fafbfc,#eff3f6 90%)
+  background-position -1px -1px
+  border-radius .25rem
+  cursor pointer
 </style>

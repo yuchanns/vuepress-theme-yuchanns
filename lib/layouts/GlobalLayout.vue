@@ -34,10 +34,16 @@ body
   background-color #fff
   color #24292e
   margin 0
+  word-wrap break-word
 
 a
   text-decoration none
-  color #0366d6
+  color $accentColor
+  &:hover
+    text-decoration underline 
+  &:active
+  &:hover
+    outline-width 0
 
 p
   margin-top 0
@@ -65,4 +71,15 @@ button
   overflow visible
   font inherit
   margin 0
+
+.width
+  &-full
+    width 100%
+
+.clearfix
+  &:after
+  &:before
+    display table
+    content ""
+    clear both
 </style>
