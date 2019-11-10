@@ -8,6 +8,7 @@
     <div class="pb-5">
       <h4 class="mb-0">{{ notFound }}</h4>
     </div>
+    <!-- todo: search bar -->
   </div>
 </template>
 
