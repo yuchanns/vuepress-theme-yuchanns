@@ -72,6 +72,12 @@ button
   font inherit
   margin 0
 
+ol
+ul
+  padding-left 0
+  margin-top 0
+  margin-bottom 0
+
 .width
   &-full
     width 100%
@@ -82,4 +88,18 @@ button
     display table
     content ""
     clear both
+.f6
+  font-size 12px
+
+.col
+  &-lg
+    &-5
+      @media (min-width 1012px)
+        width 41.66667%
+    &-12
+      width 100%
+  &-9
+    width 75%
+  &-12
+    width 100%
 </style>

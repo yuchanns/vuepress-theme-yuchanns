@@ -38,7 +38,7 @@
                 </div>
                 <div class="f6 text-gray mt-2">
                   <router-link :to="$categories._metaMap[page.frontmatter.category].path" class="ml-0 mr-3 muted-link">
-                    <span class="category-color"></span>
+                    <span class="category-color" :style="[getCategoryColor(page.frontmatter.category)]"></span>
                     <span class="category">{{ page.frontmatter.category }}</span>
                   </router-link>
                   <router-link
@@ -64,6 +64,7 @@
 import { getDistanceToNow } from '@theme/utils/compare-time'
 import Tags from '@theme/components/icons/Tags'
 import Pagination from '@theme/components/Pagination'
+import _ from 'lodash'
 
 export default {
   name: 'Home',
@@ -79,6 +80,15 @@ export default {
       return value.replace(regex, '')
     },
     getDistanceToNow
+  },
+
+  methods: {
+    getCategoryColor (label) {
+      if (_.has(this.$themeConfig.categories, [label])) {
+        return { backgroundColor: _.get(this.$themeConfig.categories, [label]) }
+      }
+      return {}
+    }
   }
 }
 </script>
@@ -90,12 +100,9 @@ export default {
 @import '~@theme/styles/border.styl'
 @import '~@theme/styles/display.styl'
 @import '~@theme/styles/button.styl'
-
-.container
-  &-xl
-    max-width 852px
-    margin-right auto
-    margin-left auto
+@import '~@theme/styles/container.styl'
+@import '~@theme/styles/position.styl'
+@import '~@theme/styles/text.styl'
 
 .muted-link
   color #586069
@@ -110,19 +117,10 @@ export default {
   width 12px
   height 12px
   border-radius 50%
-  background-color #00ADD8
+  background-color $accentColor
 
 .tags
   margin-right 5px
-
-.col
-  &-lg-12
-    @media (min-width 1012px)
-      width 100%
-  &-9
-    width 75%
-  &-12
-    width 100%
 
 .float
   &-md-left
@@ -130,12 +128,6 @@ export default {
       float left
   &-right
     float right
-
-.position-relative
-  position relative
-
-.f6
-  font-size 12px
 
 .gutter-lg
   @media (min-width 1012px)
@@ -145,18 +137,9 @@ export default {
       padding-left 16px
       padding-right 16px
 
-.text-uppercase
-  text-transform uppercase
-
-.text-capitalize
-  text-transform capitalize
-
 .h6
   font-weight 600
   font-size 12px
-
-.text-normal
-  font-weight 400
 
 .btn
   color #242910

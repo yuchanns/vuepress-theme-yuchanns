@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "date-fns": "^2.6.0",
+    "lodash": "^4.17.15",
     "vuepress-plugin-nprogress": "^1.1.4",
     "vuepress-plugin-reading-progress": "^1.0.7"
   }

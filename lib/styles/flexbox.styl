@@ -1,8 +1,21 @@
 .flex
   &-items-center
     align-items center
-  &-justify-between
-    justify-content space-between
+  &-justify
+    &-between
+      @media (min-width 1012px)
+        justify-content space-between
+    &-center
+      justify-content center
   &-wrap
     flex-wrap wrap
+  &-row-reverse
+    flex-direction row-reverse
+  &-lg
+    &-row
+      @media (min-width 1012px)
+        flex-direction row
+    &-nowrap
+      @media (min-width 1012px)
+        flex-wrap nowrap
 

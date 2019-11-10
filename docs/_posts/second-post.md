@@ -1,7 +1,7 @@
 ---
 title: second post
 date: 2019-10-02
-category: golang
+category: html
 tags:
   - demo
   - live
