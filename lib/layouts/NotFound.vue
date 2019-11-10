@@ -7,6 +7,14 @@
     </div>
     <div class="pb-5">
       <h4 class="mb-0">{{ notFound }}</h4>
+      <router-link
+        to='/'>
+        <button
+          type="button"
+          class="reset-button">
+          TAKE ME HOME
+        </button>
+      </router-link>
     </div>
     <!-- todo: search bar -->
   </div>
@@ -43,8 +51,25 @@ export default {
 @import '~@theme/styles/position.styl'
 @import '~@theme/styles/text.styl'
 
+.reset-button
+  cursor pointer
+  border none 
+  box-sizing border-box
+  padding 14px 30px
+  border-radius 60px
+  font-size 12px
+  height 42px
+  transition-property background-color
+  transition-duration .5s
+  &:hover
+    background-color hsla(0,0%,100%,.7)
+    color #fff
+
 .bg-gray-dark
   background-color #24292e
+
+.mb-0
+  margin-bottom 20px
 
 .not-found
   &-octocat-wrapper
