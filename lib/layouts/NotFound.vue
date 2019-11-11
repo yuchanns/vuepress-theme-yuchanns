@@ -11,7 +11,7 @@
         to='/'>
         <button
           type="button"
-          class="reset-button">
+          class="btn">
           TAKE ME HOME
         </button>
       </router-link>
@@ -50,20 +50,16 @@ export default {
 @import '~@theme/styles/display.styl'
 @import '~@theme/styles/position.styl'
 @import '~@theme/styles/text.styl'
+@import '~@theme/styles/button.styl'
 
-.reset-button
-  cursor pointer
-  border none 
-  box-sizing border-box
-  padding 14px 30px
+.btn
+  color #242910
+  background-color #eff3f6
+  background-image linear-gradient(-180deg,#fafbfc,#eff3f6 90%)
+  background-position -1px -1px
   border-radius 60px
-  font-size 12px
-  height 42px
-  transition-property background-color
-  transition-duration .5s
-  &:hover
-    background-color hsla(0,0%,100%,.7)
-    color #fff
+  cursor pointer
+  padding 14px 30px
 
 .bg-gray-dark
   background-color #24292e

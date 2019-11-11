@@ -22,20 +22,28 @@ module.exports = {
       github: {
         account: 'yuchanns',
         link: 'https://github.com/yuchanns'
+      },
+      twitter: {
+        account: 'Github',
+        link: 'https://twitter.com/github'
+      },
+      facebook: {
+        account: 'GitHub',
+        link: 'https://www.facebook.com/GitHub'
+      },
+      youtube: {
+        account: 'Github',
+        link: 'https://www.youtube.com/github'
+      },
+      linkedin: {
+        account: 'Github',
+        link: 'https://www.linkedin.com/company/github'
       }
     },
     categories: {
       golang: '#00add8',
       vuejs: '#3eaf7c',
       html: '#e34c26'
-    },
-    footer: {
-      left: [
-        { title: 'Twitter', link: 'https://www.twitter.com/airamusume' }
-      ],
-      right: [
-        { title: 'Blog', link: 'https://www.yuchanns.xyz' }
-      ]
     }
   }
 }
