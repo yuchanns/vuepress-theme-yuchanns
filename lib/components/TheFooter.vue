@@ -1,7 +1,7 @@
 <template>
   <footer class="footer mt-6">
+    <Navigation />
     <div class="bg-gray-light">
-      <!-- todo: navigation list1-nav-more list2-categories-more list3-tags-more list4-site-aboutme -->
       <div class="container-lg p-responsive f6 py-4 d-sm-flex flex-justify-between flex-row-reverse flex-item-center">
         <ul class="list-style-none d-flex flex-items-center mb-3 mb-sm-0 lh-condensed-ultra">
           <li class="mr-3" v-if="twitter">
@@ -75,16 +75,18 @@
 
 <script>
 import { format } from 'date-fns'
+import _ from 'lodash'
 import Tags from '@theme/components/icons/Tags'
 import SnsIcons from '@theme/components/icons/SnsIcons'
-import _ from 'lodash'
+import Navigation from '@theme/components/Navigation'
 
 export default {
   name: 'TheFooter',
 
   components: {
     Tags,
-    SnsIcons
+    SnsIcons,
+    Navigation
   },
 
   computed: {
@@ -142,17 +144,6 @@ export default {
     padding-right 16px
     padding-left 16px
 
-.list-style-none
-  list-style none
-
 .bg-gray-light
   background-color #fafbfc
-
-.link-gray
-  color #586069
-  &:hover
-    color $accentColor
-
-.lh-condensed-ultra
-  line-height 1
 </style>

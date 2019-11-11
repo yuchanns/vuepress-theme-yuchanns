@@ -15,9 +15,13 @@ module.exports = {
     lang: {
       home: 'Home'
     },
+
+    nickname: 'yuchanns',
+
     pagination: {
       lengthPerPage: 10
     },
+
     sns: {
       github: {
         account: 'yuchanns',
@@ -40,6 +44,7 @@ module.exports = {
         link: 'https://www.linkedin.com/company/github'
       }
     },
+
     categories: {
       golang: '#00add8',
       vuejs: '#3eaf7c',
