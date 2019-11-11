@@ -11,6 +11,27 @@ module.exports = {
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }]
   ],
 
+  chainWebpack: (config, isServer) => {
+    if (isServer === false) {
+      config.optimization.splitChunks({
+        maxInitialRequests: 5,
+        cacheGroups: {
+          vue: {
+            test: /[\\/]node_modules[\\/](vue|vue-router|vssue)[\\/]/,
+            name: 'vendor.vue',
+            chunks: 'all'
+          },
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            name: 'vendor.commons',
+            chunks: 'all'
+          }
+        }
+      })
+    }
+  },
+
   themeConfig: {
     lang: {
       home: 'Home'
