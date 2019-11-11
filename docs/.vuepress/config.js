@@ -67,9 +67,11 @@ module.exports = {
     },
 
     categories: {
-      golang: '#00add8',
-      vuejs: '#3eaf7c',
-      html: '#e34c26'
+      golang: '#00ADD8',
+      python: '#3572A5',
+      php: '#4F5D95',
+      lisp: '#c065db',
+      学习笔记: '#e34c26'
     }
   }
 }

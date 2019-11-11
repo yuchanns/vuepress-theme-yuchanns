@@ -1,8 +1,8 @@
 <template>
-  <div id="vuepress-theme-yuchanns" class="yuchanns">
+  <div id="vuepress-theme-yuchanns">
     <TheHeader />
 
-    <TheMain class="yuchanns-main" />
+    <TheMain />
 
     <TheFooter />
   </div>
@@ -131,11 +131,4 @@ ul
 
 .list-style-none
   list-style none
-
-.yuchanns
-  min-height 100vh
-  display flex
-  flex-direction column
-  &-main
-    flex-grow: 1
 </style>

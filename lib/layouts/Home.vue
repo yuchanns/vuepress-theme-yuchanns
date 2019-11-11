@@ -77,7 +77,10 @@ export default {
   filters: {
     stripTags (value) {
       const regex = /(<([^>]+)>)/ig
-      return value.replace(regex, '')
+      if (value) {
+        return value.replace(regex, '')
+      }
+      return ''
     },
     getDistanceToNow
   },
