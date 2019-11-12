@@ -1,6 +1,6 @@
 .d
   &-none
-    display none
+    display none!important
   &-block
     display block
   &-inline-block
@@ -23,4 +23,7 @@
         display block
     &-flex
       @media (min-width 1012px)
-        display flex
+        display flex!important
+    &-none
+      @media (min-width 1012px)
+        display none!important

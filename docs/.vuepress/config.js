@@ -37,6 +37,8 @@ module.exports = {
       home: 'Home'
     },
 
+    // logo: '/favicon-invert.png',
+
     nickname: 'yuchanns',
 
     pagination: {
