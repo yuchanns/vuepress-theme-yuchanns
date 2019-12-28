@@ -11,6 +11,8 @@ module.exports = {
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }]
   ],
 
+  base: '/vuepress-theme-yuchanns/',
+
   chainWebpack: (config, isServer) => {
     if (isServer === false) {
       config.optimization.splitChunks({
