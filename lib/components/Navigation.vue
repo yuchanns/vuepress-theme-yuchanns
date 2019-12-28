@@ -61,10 +61,10 @@ export default {
   computed: {
     categories () {
       const categories = []
-      const limitation = _.size(this.$categories._metaMap) > 6 ? 5 : 6
+      const limitation = _.size(this.$categories._metaMap) > 4 ? 3 : 4
 
       for (const attr in this.$categories._metaMap) {
-        let category = _.get(this.$categories._metaMap, [attr])
+        const category = _.get(this.$categories._metaMap, [attr])
         categories.push({
           title: category.key,
           path: category.path
@@ -74,7 +74,7 @@ export default {
         }
       }
 
-      if (limitation === 5) {
+      if (limitation === 3) {
         categories.push({
           title: 'more',
           path: '/categories'
@@ -85,10 +85,10 @@ export default {
     },
     tags () {
       const tags = []
-      const limitation = _.size(this.$tags._metaMap) > 6 ? 5 : 6
+      const limitation = _.size(this.$tags._metaMap) > 4 ? 3 : 4
 
       for (const attr in this.$tags._metaMap) {
-        let tag = _.get(this.$tags._metaMap, [attr])
+        const tag = _.get(this.$tags._metaMap, [attr])
         tags.push({
           title: tag.key,
           path: tag.path
@@ -98,7 +98,7 @@ export default {
         }
       }
 
-      if (limitation === 5) {
+      if (limitation === 3) {
         tags.push({
           title: 'more',
           path: '/tags'

@@ -2,17 +2,17 @@
   <div class="position-relative">
     <header class="Header flex-wrap flex-lg-nowrap Details p-responsive">
       <div class="Header-item d-none d-lg-flex">
-        <a 
-          href="/"
+        <router-link
+          to="/"
           class="Header-link">
           <img :src="$themeConfig.logo" height="32" width="32" v-if="$themeConfig.logo">
-          <Tags 
-            type="mark-github"
-            class="v-align-middle"
-            width="32"
-            height="32"
-            v-else/>
-        </a>
+            <Tags
+              type="mark-github"
+              class="v-align-middle"
+              width="32"
+              height="32"
+              v-else/>
+        </router-link>
       </div>
       <div class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
         <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search position-responsive">
@@ -20,8 +20,8 @@
         </div>
       </div>
       <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative">
-        <a 
-          href="/"
+        <router-link
+          to="/"
           class="Header-link">
           <img :src="$themeConfig.logo" height="32" width="32" v-if="$themeConfig.logo">
           <Tags 
@@ -30,7 +30,7 @@
             width="32"
             height="32"
             v-else/>
-        </a>
+        </router-link>
       </div>
     </header>
   </div>

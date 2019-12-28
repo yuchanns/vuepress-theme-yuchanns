@@ -2,10 +2,13 @@
   <main>
     <div class="container-xl clearfix px-3 mt-4">
       <div class="col-12 float-md-left pl-md-2">
+        <div class="width-full top-0 UnderlineNav nav-background" v-show="fixed">
+          <span class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 text-uppercase h6">home</span>
+        </div>
         <div class="position-relative">
           <div class="d-lg-flex gutter-lg mt-4">
             <div class="col-lg-12">
-              <div class="position-relative d-md-flex flex-wrap flex-justify-between flex-items-center border-bottom border-gray-dark pb-3">
+              <div class="position-relative d-md-flex flex-wrap flex-justify-between flex-items-center border-bottom border-gray-dark pb-3" id="head-title">
                 <h2 class="h6 text-uppercase">home</h2>
               </div>
               <div
@@ -36,17 +39,19 @@
                     {{ page.excerpt | stripTags }}
                   </p>
                 </div>
-                <div class="f6 text-gray mt-2">
-                  <router-link :to="$categories._metaMap[page.frontmatter.category].path" class="ml-0 mr-3 muted-link">
-                    <span class="category-color" :style="[getCategoryColor(page.frontmatter.category)]"></span>
-                    <span class="category">{{ page.frontmatter.category }}</span>
-                  </router-link>
+                <div class="tags-container d-inline-flex flex-wrap flex-items-center f6 my-1" v-if="page.frontmatter.tags">
                   <router-link
                     :to="$tags._metaMap[tag].path"
-                    class="muted-link"
+                    class="tags tags-link f6 my-1"
                     v-for="(tag, key) in page.frontmatter.tags" :key="key">
-                    <tags type="tags" />
-                    <span class="tags">{{ tag }}</span>
+                    {{ tag }}
+                  </router-link>
+                </div>
+                <div class="f6 text-gray mt-2">
+                  <router-link :to="$categories._metaMap[page.frontmatter.category].path"
+                    class="ml-0 mr-3 muted-link">
+                    <span class="category-color" :style="[getCategoryColor(page.frontmatter.category)]"></span>
+                    <span class="category">{{ page.frontmatter.category }}</span>
                   </router-link>
                   Created {{ page.frontmatter.date | getDistanceToNow }}
                 </div>
@@ -74,9 +79,15 @@ export default {
     Pagination
   },
 
+  data () {
+    return {
+      fixed: false
+    }
+  },
+
   filters: {
     stripTags (value) {
-      const regex = /(<([^>]+)>)/ig
+      const regex = /<[^>]+>/ig
       if (value) {
         return value.replace(regex, '')
       }
@@ -92,6 +103,12 @@ export default {
       }
       return {}
     }
+  },
+  mounted () {
+    const navBar = document.querySelector('#head-title')
+    window.addEventListener('scroll', _.throttle(() => {
+      this.fixed = navBar.getBoundingClientRect().bottom <= 0
+    }), 100)
   }
 }
 </script>
@@ -106,6 +123,41 @@ export default {
 @import '~@theme/styles/container.styl'
 @import '~@theme/styles/position.styl'
 @import '~@theme/styles/text.styl'
+
+.top-0
+  top 0
+
+.UnderlineNav
+  display flex
+  overflow-x auto
+  overflow-y hidden
+  justify-content space-between
+  &-item
+    padding 16px 0
+    margin-right 16px
+    line-height 1.5
+    color #586069
+    text-align center
+    border-bottom 2px solid transparent
+    z-index 999
+
+.nav-background
+  background-color #fff
+  border-bottom 1px solid #d1d5da
+  position fixed
+  z-index 999
+  box-shadow 0 1px 2px rgba(0 0 0 .075)
+  &:after
+    position fixed
+    top 0
+    right 0
+    left 0
+    z-index 100
+    height 54px
+    content ""
+    background-color #fff
+    border-bottom 1px solid #d1d5da
+    box-shadow 0 1px 2px rgba(0 0 0 .075)
 
 .muted-link
   color #586069
@@ -123,7 +175,18 @@ export default {
   background-color $accentColor
 
 .tags
-  margin-right 5px
+  display inline-block
+  padding .3em .9em
+  margin 0 .5em .5em 0
+  white-space nowrap
+  background-color #f1f8ff
+  border-radius 3px
+  &-link:hover
+    text-decoration none
+    background-color #def
+  &-container
+    height 30px
+    overflow hidden
 
 .float
   &-md-left

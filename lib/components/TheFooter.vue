@@ -16,7 +16,7 @@
           </li>
           <li class="mr-3" v-if="facebook">
             <a
-              :href="facebook.link" 
+              :href="facebook.link"
               :title="facebook.account + ' on facebook'"
               style="color: #959da5">
               <SnsIcons
@@ -26,7 +26,7 @@
           </li>
           <li class="mr-3" v-if="youtube">
             <a
-              :href="youtube.link" 
+              :href="youtube.link"
               :title="youtube.account + ' on youtube'"
               style="color: #959da5">
               <SnsIcons
@@ -36,7 +36,7 @@
           </li>
           <li class="mr-3" v-if="linkedin">
             <a
-              :href="linkedin.link" 
+              :href="linkedin.link"
               :title="linkedin.account + ' on linkedin'"
               style="color: #959da5">
               <SnsIcons
@@ -46,7 +46,7 @@
           </li>
           <li class="mr-3" v-if="github">
             <a
-              :href="github.link" 
+              :href="github.link"
               :title="github.account + ' on github'"
               style="color: #959da5">
               <Tags

@@ -40,7 +40,7 @@ a
   text-decoration none
   color $accentColor
   &:hover
-    text-decoration underline 
+    text-decoration underline
   &:active
   &:hover
     outline-width 0
