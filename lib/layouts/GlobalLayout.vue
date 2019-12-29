@@ -85,6 +85,15 @@ pre
   font-family SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace
   font-size 12px
 
+table
+  border-spacing 0
+  border-collapse collapse
+
+thead
+  display table-header-group
+  vertical-align middle
+  border-color inherit
+
 .width
   &-full
     width 100%

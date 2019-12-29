@@ -19,7 +19,7 @@ yarn dev
 
 ## Basic Feature
 - [x] PostList
-- [ ] Post
+- [X] Post
 - [ ] Categories
 - [ ] Tags
 - [ ] Abouts

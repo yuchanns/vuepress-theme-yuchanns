@@ -1,5 +1,5 @@
 ---
-title: Markdown-it1
+title: Markdown-it
 date: 2019-12-29 12:00:00
 category: vuepress
 tags:
@@ -236,6 +236,14 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
 ### [Custom containers](https://github.com/markdown-it/markdown-it-container)
 
-::: warning
-*here be dragons*
+:::warning
+*Your site is having problems building: Page build failed.*
+:::
+
+:::tip
+*Display a "Sponsor" button*
+:::
+
+:::danger
+*Delete this repository*
 :::

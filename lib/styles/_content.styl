@@ -7,6 +7,8 @@
     padding 40px
   img
     max-width 100%
+    box-sizing initial
+    background-color #fff
 
   h1
   h2
@@ -64,12 +66,29 @@
   li
     &>p
       margin-top 16px
+
+  table
+    display block
+    width 100%
+    overflow auto
+    tr
+      background-color #fff
+      border-top 1px solid #c6cbd1
+      &:nth-child(2n)
+        background-color #f6f8fa
+    th
+      font-weight 600
+    td
+    th
+      padding 6px 13px
+      border 1px solid #dfe2e5
   
   ol
   ul
   p
   blockquote
   pre
+  table
     margin-top 0
     margin-bottom 16px
 
@@ -125,3 +144,22 @@
   margin-left -20px
   padding-right 4px
   line-height 1
+
+.custom-block
+  padding .1rem 1.5rem
+  margin 1rem 0
+  &.warning
+    color #735c0f
+    background-color #fffbdd
+    border 1px solid rgba(27 31 35 .15)
+  &.tip
+    background-color #f1f8ff
+    border 1px solid #c8e1ff
+  &.danger
+    color #cb2431
+    border 1px solid #d73a49
+
+.custom-block-title
+  font-weight 600
+  margin-bottom -.4rem
+  margin-top 16px!important
