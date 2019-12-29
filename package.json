@@ -46,7 +46,10 @@
   "dependencies": {
     "date-fns": "^2.6.0",
     "lodash": "^4.17.15",
+    "vuepress-plugin-container": "^2.1.2",
     "vuepress-plugin-nprogress": "^1.1.4",
-    "vuepress-plugin-reading-progress": "^1.0.7"
+    "vuepress-plugin-reading-progress": "^1.0.7",
+    "vuepress-plugin-smooth-scroll": "^0.0.9",
+    "vuepress-plugin-table-of-contents": "^1.1.5"
   }
 }
