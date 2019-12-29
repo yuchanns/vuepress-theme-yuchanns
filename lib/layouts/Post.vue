@@ -1,6 +1,16 @@
 <template>
   <main>
-    <div class="pagehead pt-0 pt-lg-4">
+    <div class="pagehead pt-0 pt-lg-4" id="post-title">
+      <div class="pagehead-details-cotainer clearfix container-lg p-responsive d-lg-block">
+        <h1>
+          <BackIcon title="back" @click.native="back" />
+          <span class="text-uppercase">post</span>
+          <span style="margin: 0 .25em">/</span>
+          <strong>{{ $page.title }}</strong>
+        </h1>
+      </div>
+    </div>
+    <div class="pagehead pt-0 pt-lg-4 width-full nav-background" v-show="fixed">
       <div class="pagehead-details-cotainer clearfix container-lg p-responsive d-lg-block">
         <h1>
           <BackIcon title="back" @click.native="back" />
@@ -55,6 +65,12 @@ export default {
     DateIcon
   },
 
+  data () {
+    return {
+      fixed: false
+    }
+  },
+
   computed: {
     prevPage () {
       if (this.index === this.pages.length) {
@@ -86,11 +102,18 @@ export default {
 
   filters: {
     getDistanceToNow
+  },
+
+  mounted () {
+    const navBar = document.querySelector('#post-title')
+    window.addEventListener('scroll', _.throttle(() => {
+      this.fixed = navBar.getBoundingClientRect().bottom <= 0
+    }), 100)
   }
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '~@theme/styles/flexbox.styl'
 @import '~@theme/styles/padding.styl'
 @import '~@theme/styles/margin.styl'
@@ -159,4 +182,12 @@ export default {
     margin-left 3px
     vertical-align middle
     background-color #ddd
+
+.nav-background
+  position fixed
+  z-index 999
+  padding-top 20px
+  top 0
+  border-bottom 1px solid #d1d5da
+  box-shadow 0 1px 2px rgba(0 0 0 .075)
 </style>
