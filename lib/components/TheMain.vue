@@ -10,6 +10,7 @@
 
 <script>
 import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
+import Vue from 'vue'
 
 export default {
   name: 'TheMain',
@@ -20,7 +21,13 @@ export default {
 
   computed: {
     layout () {
-      return this.$page.frontmatter.layout || 'NotFound'
+      const layout = this.$page.frontmatter.layout
+
+      if (layout && (this.$vuepress.getLayoutAsyncComponent(layout) || this.$vuepress.getVueComponent(layout))) {
+        return Vue.component(layout)
+      }
+
+      return 'NotFound'
     }
   }
 }

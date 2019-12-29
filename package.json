@@ -40,7 +40,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^5.2.3",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-reading-time": "^0.1.1"
   },
   "dependencies": {
     "date-fns": "^2.6.0",

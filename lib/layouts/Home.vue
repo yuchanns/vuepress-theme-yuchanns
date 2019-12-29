@@ -124,6 +124,12 @@ export default {
 @import '~@theme/styles/position.styl'
 @import '~@theme/styles/text.styl'
 
+ol
+ul
+  padding-left 0
+  margin-top 0
+  margin-bottom 0
+
 .top-0
   top 0
 

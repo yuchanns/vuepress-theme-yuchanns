@@ -2,7 +2,7 @@
   <div class="container-lg p-responsive">
     <div class="d-flex flex-wrap py-5 mb-5">
       <div class="col-12 col-lg-4 mb-5">
-        <h1>{{ $themeConfig.nickname }}</h1>
+        <h1>{{ $siteTitle }}</h1>
       </div>
       <div class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4">
         <h2 class="h5 mb-3 text-mono text-gray-light text-normal">Navigation</h2>
@@ -120,6 +120,12 @@ export default {
 @import '~@theme/styles/position.styl'
 @import '~@theme/styles/border.styl'
 @import '~@theme/styles/text.styl'
+
+ol
+ul
+  padding-left 0
+  margin-top 0
+  margin-bottom 0
 
 .h5
   font-size 14px

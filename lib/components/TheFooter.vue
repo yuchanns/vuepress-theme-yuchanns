@@ -134,6 +134,12 @@ export default {
 @import '~@theme/styles/border.styl'
 @import '~@theme/styles/text.styl'
 
+ol
+ul
+  padding-left 0
+  margin-top 0
+  margin-bottom 0
+
 .p-responsive
   padding-right 16px
   padding-left 16px

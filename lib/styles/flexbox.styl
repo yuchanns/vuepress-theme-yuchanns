@@ -1,8 +1,14 @@
 .flex
+  &-shrink
+    &-0
+      flex-shrink 0
   &-auto
     flex 1 1 auto
-  &-items-center
-    align-items center
+  &-items
+    &-start
+      align-items flex-start 
+    &-center
+      align-items center
   &-justify
     &-between
       @media (min-width 1012px)
@@ -13,6 +19,18 @@
     flex-wrap wrap
   &-row-reverse
     flex-direction row-reverse
+  &-md
+    &-row
+      @media (min-width 768px)
+        flex-direction row!important
+    &-order
+      &-1
+        @media (min-width 768px)
+          order 1!important
+    &-items
+      &-center
+        @media (min-width 768px)
+          align-items center
   &-lg
     &-row
       @media (min-width 1012px)

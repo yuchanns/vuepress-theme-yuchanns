@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="stylus">
+@import '~@theme/styles/index.styl'
 *
   box-sizing border-box
 
@@ -71,12 +72,6 @@ button
   overflow visible
   font inherit
   margin 0
-
-ol
-ul
-  padding-left 0
-  margin-top 0
-  margin-bottom 0
 
 .width
   &-full
@@ -131,4 +126,14 @@ ul
 
 .list-style-none
   list-style none
+
+.p-responsive
+  padding-right: 16px
+  padding-left: 16px
+  @media (min-width 1012px)
+    padding-right 16px!important
+    padding-left 16px!important
+  @media (min-width 544px)
+    padding-right 40px
+    padding-left 40px
 </style>
