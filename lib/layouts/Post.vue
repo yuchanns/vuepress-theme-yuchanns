@@ -3,7 +3,7 @@
     <div class="pagehead pt-0 pt-lg-4" id="post-title">
       <div class="pagehead-details-cotainer clearfix container-lg p-responsive d-lg-block">
         <h1>
-          <BackIcon title="back" @click.native="back" />
+          <router-link to="/"><BackIcon /></router-link>
           <span class="text-uppercase">post</span>
           <span style="margin: 0 .25em">/</span>
           <strong>{{ $page.title }}</strong>
@@ -13,7 +13,7 @@
     <div class="pagehead pt-0 pt-lg-4 width-full nav-background" v-show="fixed">
       <div class="pagehead-details-cotainer clearfix container-lg p-responsive d-lg-block">
         <h1>
-          <BackIcon title="back" @click.native="back" />
+          <router-link to="/"><BackIcon /></router-link>
           <span class="text-uppercase">post</span>
           <span style="margin: 0 .25em">/</span>
           <strong>{{ $page.title }}</strong>
@@ -79,7 +79,7 @@ export default {
       return this.pages[this.index + 1]
     },
     nextPage () {
-      if (this.index === 0) {
+      if (this.index === 1) {
         return null
       }
       return this.pages[this.index - 1]
@@ -91,12 +91,6 @@ export default {
       return this.$site.pages.filter(item => {
         return item.id === 'Home'
       })
-    }
-  },
-
-  methods: {
-    back () {
-      this.$router.back()
     }
   },
 
