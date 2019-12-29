@@ -55,6 +55,7 @@
 import BackIcon from '@theme/components/icons/BackIcon'
 import DateIcon from '@theme/components/icons/DateIcon'
 import { getDistanceToNow } from '@theme/utils/compare-time'
+import { getTime, parseISO } from 'date-fns'
 import _ from 'lodash'
 
 export default {
@@ -79,17 +80,21 @@ export default {
       return this.pages[this.index + 1]
     },
     nextPage () {
-      if (this.index === 1) {
+      if (this.index === 0) {
         return null
       }
       return this.pages[this.index - 1]
     },
     index () {
-      return _.findIndex(this.pages, this.$page)
+      return _.findIndex(this.pages, obj => {
+        return obj.key === this.$page.key
+      })
     },
     pages () {
       return this.$site.pages.filter(item => {
         return item.id === 'Home'
+      }).sort((a, b) => {
+        return getTime(parseISO(b.frontmatter.date)) - getTime(parseISO(a.frontmatter.date))
       })
     }
   },
