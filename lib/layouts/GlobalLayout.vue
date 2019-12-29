@@ -73,6 +73,18 @@ button
   font inherit
   margin 0
 
+strong
+  font-weight 600
+
+blockquote
+  margin 0
+
+code
+tt
+pre
+  font-family SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace
+  font-size 12px
+
 .width
   &-full
     width 100%
