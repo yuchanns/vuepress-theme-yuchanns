@@ -25,10 +25,12 @@ export default {
 
   computed: {
     layout () {
-      if (this.$page.regularPath.startsWith('/tags')) {
-        return 'Tags'
-      } else if (this.$page.regularPath.startsWith('/categories')) {
-        return 'Category'
+      if (this.$page.regularPath) {
+        if (this.$page.regularPath.startsWith('/tags')) {
+          return 'Tags'
+        } else if (this.$page.regularPath.startsWith('/categories')) {
+          return 'Category'
+        }
       }
 
       const layout = this.$page.frontmatter.layout
