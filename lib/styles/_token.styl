@@ -1,3 +1,23 @@
+div[class*=language-]
+  position relative
+  background-color #f6f8fa
+  border-radius 6px
+  pre
+  pre[class*=language-]
+    background transparent
+    position relative
+    z-index 1
+  .highlight-lines
+    user-select none
+    padding-top 1.0rem
+    position absolute
+    top 0
+    left 0
+    width 100%
+    line-height 1.2
+    .highlighted
+      background-color #fffbdd
+
 .token
   &.keyword
   &.operator

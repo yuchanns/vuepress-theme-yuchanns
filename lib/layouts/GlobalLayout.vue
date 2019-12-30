@@ -25,7 +25,6 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '~@theme/styles/index.styl'
 *
   box-sizing border-box
 

@@ -79,7 +79,7 @@ func BenchmarkSample_Greet(t *testing.B) {
 使用官方**crypto**（效率较低，等待补充cgo的openssl）
 
 RSA密钥加密长度有限，需要分割加密内容，使用go的**切片**特性来实现切割，最后利用**bytes.Join**合并，加密输出base64。
-```go
+```go {66-77}
 package rsa
 
 import (
