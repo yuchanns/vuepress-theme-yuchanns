@@ -11,6 +11,10 @@ module.exports = {
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }]
   ],
 
+  markdown: {
+    lineNumbers: false
+  },
+
   chainWebpack: (config, isServer) => {
     if (isServer === false) {
       config.optimization.splitChunks({
