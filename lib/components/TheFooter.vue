@@ -91,7 +91,7 @@ export default {
 
   computed: {
     year () {
-      return format(new Date(), 'Y')
+      return format(new Date(), 'yyyy')
     },
     github () {
       return this.getSns('github')

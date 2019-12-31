@@ -44,8 +44,9 @@
     "vuepress-plugin-reading-time": "^0.1.1"
   },
   "dependencies": {
-    "date-fns": "^2.6.0",
+    "date-fns": "^2.8.1",
     "lodash": "^4.17.15",
+    "vue-calendar-heatmap": "^0.8.4",
     "vuepress-plugin-container": "^2.1.2",
     "vuepress-plugin-nprogress": "^1.1.4",
     "vuepress-plugin-reading-progress": "^1.0.7",

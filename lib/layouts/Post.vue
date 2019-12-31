@@ -55,7 +55,8 @@
 import BackIcon from '@theme/components/icons/BackIcon'
 import DateIcon from '@theme/components/icons/DateIcon'
 import { getDistanceToNow } from '@theme/utils/compare-time'
-import { getTime, parseISO } from 'date-fns'
+import { parseISO } from 'date-fns'
+import compareDesc from 'date-fns/compareDesc'
 import _ from 'lodash'
 
 export default {
@@ -94,7 +95,7 @@ export default {
       return this.$site.pages.filter(item => {
         return item.id === 'Home'
       }).sort((a, b) => {
-        return getTime(parseISO(b.frontmatter.date)) - getTime(parseISO(a.frontmatter.date))
+        return compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date))
       })
     }
   },

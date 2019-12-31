@@ -9,6 +9,8 @@
       align-items flex-start 
     &-center
       align-items center
+    &-end
+      align-items flex-end
   &-justify
     &-between
       @media (min-width 1012px)
@@ -38,6 +40,11 @@
     &-nowrap
       @media (min-width 1012px)
         flex-wrap nowrap
+  &-xl
+    &-items
+      &-center
+        @media (min-width 1280px)
+          align-items center
   &-order
     &-none
       @media (min-width 1012px)

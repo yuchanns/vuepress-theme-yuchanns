@@ -97,12 +97,20 @@ thead
   &-full
     width 100%
 
+.height
+  &-full
+    height 100%
+
 .clearfix
   &:after
   &:before
     display table
     content ""
     clear both
+
+.f4
+  @media (min-width 768px)
+    font-size 16px
 
 .f5
   font-size 14px
@@ -125,6 +133,9 @@ thead
     &-5
       @media (min-width 1012px)
         width 41.66667%
+    &-10
+      @media (min-width 1012px)
+        width 83.33333%!important
     &-12
       width 100%
   &-6
@@ -156,4 +167,7 @@ thead
   @media (min-width 544px)
     padding-right 40px
     padding-left 40px
+
+.overflow-hidden
+  overflow hidden
 </style>
