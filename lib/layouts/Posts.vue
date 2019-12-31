@@ -13,6 +13,8 @@
                       :end-date="today"
                       :values="heatValues"
                       :range-color="rangeColor"
+                      height="112"
+                      width="622"
                     />
                   </div>
                 </div>
