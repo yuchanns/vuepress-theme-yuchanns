@@ -94,6 +94,10 @@ thead
   vertical-align middle
   border-color inherit
 
+mark
+  background-color #fcf8e3
+  padding .2em
+
 .width
   &-full
     width 100%
