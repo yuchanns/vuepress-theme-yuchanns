@@ -1,5 +1,5 @@
 <template>
-  <svg class="octicon" :class="`octicon-${type}`" :viewBox="svg.viewBox" version="1.1" :width="svg.height" :height="svg.height" aria-hidden="true"><path fill-rule="evenodd" :d="svg.d"></path></svg>
+  <svg class="octicon" :class="`octicon-${type}`" :viewBox="svg.viewBox" version="1.1" :width="svg.width" :height="svg.height" aria-hidden="true"><path fill-rule="evenodd" :d="svg.d"></path></svg>
 </template>
 
 <script>
