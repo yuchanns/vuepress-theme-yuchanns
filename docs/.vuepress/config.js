@@ -41,12 +41,10 @@ module.exports = {
       home: 'Home'
     },
 
-    // logo: '/favicon-invert.png',
-
     nickname: 'yuchanns',
 
     pagination: {
-      lengthPerPage: 5
+      lengthPerPage: 1
     },
 
     sns: {
@@ -55,12 +53,12 @@ module.exports = {
         link: 'https://github.com/yuchanns'
       },
       twitter: {
-        account: 'Github',
-        link: 'https://twitter.com/github'
+        account: 'airamusume',
+        link: 'https://twitter.com/airamusume'
       },
       facebook: {
-        account: 'GitHub',
-        link: 'https://www.facebook.com/GitHub'
+        account: 'airamusume',
+        link: 'https://www.facebook.com/airamusume'
       },
       youtube: {
         account: 'Github',
@@ -73,11 +71,8 @@ module.exports = {
     },
 
     categories: {
-      golang: '#00ADD8',
-      python: '#3572A5',
-      php: '#4F5D95',
-      lisp: '#c065db',
-      学习笔记: '#e34c26'
+      Vue: '#2c3e50',
+      Document: '#e34c26'
     }
   }
 }
