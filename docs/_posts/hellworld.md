@@ -3,10 +3,8 @@ title: Vuepress
 date: 2020-01-01 12:00:00
 category: Vue
 tags:
-  - vuepress
+  - Vuepress
 ---
-# VuePress
-
 *Vue-powered Static Site Generator*
 
 <!-- more -->
