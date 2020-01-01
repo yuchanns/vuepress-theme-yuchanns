@@ -44,7 +44,7 @@ module.exports = {
     nickname: 'yuchanns',
 
     pagination: {
-      lengthPerPage: 1
+      lengthPerPage: 5
     },
 
     sns: {
