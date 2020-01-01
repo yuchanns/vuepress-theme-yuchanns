@@ -275,6 +275,9 @@ ul
   white-space nowrap
   cursor pointer
   border-radius 3px
+  &:hover
+    text-decoration none
+    background-color #eaecef
   &.selected
     color #fff
     background-color #0366d6
