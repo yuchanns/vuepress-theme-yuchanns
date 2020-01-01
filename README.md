@@ -20,12 +20,12 @@ yarn dev
 ```
 
 ## Basic Feature
-- [x] PostList
+- [x] Home
 - [X] Post
 - [ ] Categories
 - [ ] Tags
 - [ ] Abouts
-- [ ] PostsHeatmap
+- [X] PostsHeatmap
 - [ ] Avatar
 
 ## LICENSE

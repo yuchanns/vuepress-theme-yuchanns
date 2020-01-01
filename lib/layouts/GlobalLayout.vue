@@ -49,8 +49,9 @@ p
   margin-top 0
   margin-bottom 10px
 
-h3
-h4
+.h3
+.h4
+.h6
   font-weight 600
 
 h3
@@ -140,6 +141,8 @@ thead
       width 100%
   &-6
     width 50%
+  &-8
+    width 66.66667%
   &-9
     width 75%
   &-12
