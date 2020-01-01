@@ -6,7 +6,7 @@
           <div class="d-flex">
             <div class="col-12 col-lg-10">
               <div class="position-relative">
-                <h2 class="f4 text-normal mb-2">{{ postsLastYear.length }} posts in the last year</h2>
+                <h2 class="f4 text-normal mb-2">{{ postsLastYear.length }} posts in {{ heatTitle }}</h2>
                 <div class="border border-gray-dark py-2 graph-before-activity-overview">
                   <div class="mx-3 d-flex flex-column flex-items-end flex-xl-items-center overflow-hidden pt-1 height-full text-center">
                     <calendar-heatmap
@@ -66,10 +66,18 @@ export default {
   },
 
   computed: {
+    heatTitle () {
+      if (this.selectedYear !== this.year.end) {
+        return this.selectedYear
+      }
+
+      return 'the last year'
+    },
     endDate () {
       if (this.selectedYear !== this.year.end) {
         return this.selectedYear.toString() + '-12-31'
       }
+
       return this.today
     },
 
