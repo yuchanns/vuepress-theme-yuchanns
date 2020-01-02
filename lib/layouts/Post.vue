@@ -114,16 +114,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/flexbox.styl'
-@import '~@theme/styles/padding.styl'
-@import '~@theme/styles/margin.styl'
-@import '~@theme/styles/border.styl'
-@import '~@theme/styles/display.styl'
-@import '~@theme/styles/button.styl'
-@import '~@theme/styles/container.styl'
-@import '~@theme/styles/position.styl'
-@import '~@theme/styles/text.styl'
-
 .pagehead
   padding-bottom 0
   background-color #fafbfc

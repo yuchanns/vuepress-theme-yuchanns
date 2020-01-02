@@ -49,11 +49,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/position.styl'
-@import '~@theme/styles/margin.styl'
-@import '~@theme/styles/flexbox.styl'
-@import '~@theme/styles/display.styl'
-
 .Header
 .Header-item
   align-items center

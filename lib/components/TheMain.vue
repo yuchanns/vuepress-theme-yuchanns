@@ -12,6 +12,7 @@
 import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
 import Tags from '@theme/layouts/Tags.vue'
 import Category from '@theme/layouts/Category.vue'
+import Posts from '@theme/layouts/Posts.vue'
 import Vue from 'vue'
 
 export default {
@@ -20,7 +21,8 @@ export default {
   components: {
     TransitionFadeSlide,
     Tags,
-    Category
+    Category,
+    Posts
   },
 
   computed: {
@@ -30,6 +32,8 @@ export default {
           return 'Tags'
         } else if (this.$page.regularPath.startsWith('/categories')) {
           return 'Category'
+        } else if (this.$page.regularPath === '/posts/') {
+          return 'Posts'
         }
       }
 

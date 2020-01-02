@@ -98,8 +98,8 @@ export default {
 
   methods: {
     getCategoryColor (label) {
-      if (_.has(this.$themeConfig.categories, [label])) {
-        return { backgroundColor: _.get(this.$themeConfig.categories, [label]) }
+      if (label in this.$themeConfig.categories && 'color' in this.$themeConfig.categories[label]) {
+        return { backgroundColor: this.$themeConfig.categories[label].color }
       }
       return {}
     }
@@ -114,16 +114,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/flexbox.styl'
-@import '~@theme/styles/padding.styl'
-@import '~@theme/styles/margin.styl'
-@import '~@theme/styles/border.styl'
-@import '~@theme/styles/display.styl'
-@import '~@theme/styles/button.styl'
-@import '~@theme/styles/container.styl'
-@import '~@theme/styles/position.styl'
-@import '~@theme/styles/text.styl'
-
 ol
 ul
   padding-left 0

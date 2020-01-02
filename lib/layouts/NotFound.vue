@@ -45,13 +45,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/padding.styl'
-@import '~@theme/styles/margin.styl'
-@import '~@theme/styles/display.styl'
-@import '~@theme/styles/position.styl'
-@import '~@theme/styles/text.styl'
-@import '~@theme/styles/button.styl'
-
 .btn
   color #242910
   background-color #eff3f6

@@ -26,10 +26,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/border.styl'
-@import '~@theme/styles/padding.styl'
-@import '~@theme/styles/display.styl'
-
 .avatar
   display inline-block
   overflow hidden

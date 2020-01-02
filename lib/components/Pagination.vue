@@ -36,8 +36,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/button.styl'
-
 .pagination-container
   margin-top 20px
   margin-bottom 15px

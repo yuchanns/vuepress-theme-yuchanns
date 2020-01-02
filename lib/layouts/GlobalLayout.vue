@@ -49,6 +49,19 @@ p
   margin-top 0
   margin-bottom 10px
 
+.h0
+  &-mktg
+    font-size 32px
+    @media (min-width 768px)
+      font-size 40px
+.h2
+  &-mktg
+    font-size 22px
+    font-weight 500
+    font-family Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol
+    @media (min-width 768px)
+      font-size 24px
+
 .h3
 .h4
 .h6
@@ -113,15 +126,18 @@ mark
     content ""
     clear both
 
-.f4
-  @media (min-width 768px)
-    font-size 16px
-
-.f5
-  font-size 14px
-
-.f6
-  font-size 12px
+.f
+  &3
+    font-size 18px
+    @media (min-width 768px)
+      font-size 20px
+  &4
+    @media (min-width 768px)
+      font-size 16px
+  &5
+    font-size 14px
+  &6
+    font-size 12px
 
 .col
   &-sm
@@ -138,6 +154,9 @@ mark
     &-5
       @media (min-width 1012px)
         width 41.66667%
+    &-9
+      @media (min-width 1012px)
+        width 75%
     &-10
       @media (min-width 1012px)
         width 83.33333%!important
@@ -156,6 +175,10 @@ mark
   color #586069
   &:hover
     color $accentColor
+  &-dark
+    color #24292e
+    &:hover
+      color #0366d6
 
 .lh-condensed
   line-height 1.25
@@ -177,4 +200,19 @@ mark
 
 .overflow-hidden
   overflow hidden
+
+.bg
+  &-white
+    background-color #fff
+  &-gray-light
+    background-color #fafbfc
+  &-blue-light
+    background-color #f1f8ff
+
+.no-underline
+  text-decoration none!important
+
+.rounded
+  &-1
+    border-radius 3px
 </style>

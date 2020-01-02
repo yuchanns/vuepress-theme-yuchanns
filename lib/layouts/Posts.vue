@@ -227,16 +227,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/flexbox.styl'
-@import '~@theme/styles/padding.styl'
-@import '~@theme/styles/margin.styl'
-@import '~@theme/styles/border.styl'
-@import '~@theme/styles/display.styl'
-@import '~@theme/styles/button.styl'
-@import '~@theme/styles/container.styl'
-@import '~@theme/styles/position.styl'
-@import '~@theme/styles/text.styl'
-
 ol
 ul
   padding-left 0
@@ -256,9 +246,6 @@ ul
   &-lg
     @media (max-width 1011px) and (min-width 768px)
       display none
-
-.bg-white
-  background-color #fff
 
 .filter-list
   list-style-type none

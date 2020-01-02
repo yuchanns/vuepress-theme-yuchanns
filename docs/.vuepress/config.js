@@ -71,8 +71,8 @@ module.exports = {
     },
 
     categories: {
-      Vue: '#2c3e50',
-      Document: '#e34c26'
+      Vue: { color: '#2c3e50', logo: '/images/vue.png', desc: 'Vue.js Vue.js is a JavaScript framework for building interactive web applications.' },
+      Document: { color: '#e34c26', desc: 'Document is a guidebook for users.' }
     }
   }
 }
