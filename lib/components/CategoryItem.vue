@@ -138,10 +138,6 @@ export default {
 .box-shadow
   box-shadow 0 1px 1px rgba(27 31 35 .1)
 
-.article-excerpt
-  &>>>p
-    margin-bottom 0
-
 ol
 ul
   padding-left 0
