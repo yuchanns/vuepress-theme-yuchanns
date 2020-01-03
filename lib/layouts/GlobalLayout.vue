@@ -54,6 +54,11 @@ p
     font-size 32px
     @media (min-width 768px)
       font-size 40px
+.h0
+  &-mktg
+    font-size 26px
+    @media (min-width 768px)
+      font-size 32px
 .h2
   &-mktg
     font-size 22px
@@ -63,6 +68,10 @@ p
       font-size 24px
 
 .h3
+  &mktg
+    font-size 18px
+    @media (min-width 768px)
+      font-size 20px
 .h4
 .h6
   font-weight 600
@@ -78,6 +87,9 @@ h5
 h6
   margin-top 0
   margin-bottom 0
+
+img
+  border-style none
 
 button
   font-family inherit
@@ -144,6 +156,13 @@ mark
     &-3
       @media (min-width 544px)
         width 25%!important
+    &-10
+      @media (min-width 544px)
+        width 83.33333%
+  &-md
+    &-8
+      @media (min-width 768px)
+        width 66.66667%
   &-lg
     &-2
       @media (min-width 1012px)
@@ -215,4 +234,18 @@ mark
 .rounded
   &-1
     border-radius 3px
+
+.tags
+  display inline-block
+  padding .3em .9em
+  margin 0 .5em .5em 0
+  white-space nowrap
+  background-color #f1f8ff
+  border-radius 3px
+  &-link:hover
+    text-decoration none
+    background-color #def
+  &-container
+    height 30px
+    overflow hidden
 </style>

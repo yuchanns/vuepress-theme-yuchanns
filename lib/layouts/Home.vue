@@ -35,8 +35,9 @@
                   </div>
                 </div>
                 <div class="py-1">
-                  <p class="d-inline-block col-9 text-gray pr-4" itemprop="description">
-                    {{ page.excerpt | stripTags }}
+                  <p class="d-inline-block col-9 text-gray pr-4"
+                    itemprop="description"
+                    v-html="page.excerpt">
                   </p>
                 </div>
                 <div class="tags-container d-inline-flex flex-wrap flex-items-center f6 my-1" v-if="page.frontmatter.tags">
@@ -86,13 +87,13 @@ export default {
   },
 
   filters: {
-    stripTags (value) {
-      const regex = /<[^>]+>/ig
-      if (value) {
-        return value.replace(regex, '')
-      }
-      return ''
-    },
+    // stripTags (value) {
+    //   const regex = /<[^>]+>/ig
+    //   if (value) {
+    //     return value.replace(regex, '')
+    //   }
+    //   return ''
+    // },
     getDistanceToNow
   },
 
@@ -169,20 +170,6 @@ ul
   height 12px
   border-radius 50%
   background-color $accentColor
-
-.tags
-  display inline-block
-  padding .3em .9em
-  margin 0 .5em .5em 0
-  white-space nowrap
-  background-color #f1f8ff
-  border-radius 3px
-  &-link:hover
-    text-decoration none
-    background-color #def
-  &-container
-    height 30px
-    overflow hidden
 
 .float
   &-md-left

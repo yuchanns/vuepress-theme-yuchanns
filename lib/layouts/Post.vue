@@ -4,8 +4,6 @@
       <div class="pagehead-details-cotainer clearfix container-lg p-responsive d-lg-block">
         <h1>
           <router-link to="/"><BackIcon /></router-link>
-          <span class="text-uppercase">post</span>
-          <span style="margin: 0 .25em">/</span>
           <strong>{{ $page.title }}</strong>
         </h1>
       </div>
