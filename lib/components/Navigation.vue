@@ -11,7 +11,7 @@
             <router-link to="/" class="link-gray">Home</router-link>
           </li>
           <li class="lh-condensed mb-3">
-            <router-link to="/posts" class="link-gray">Posts</router-link>
+            <router-link to="/archive" class="link-gray">Archive</router-link>
           </li>
         </ul>
       </div>

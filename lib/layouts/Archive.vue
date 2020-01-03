@@ -9,14 +9,17 @@
                 <h2 class="f4 text-normal mb-2">{{ postsLastYear.length }} posts in {{ heatTitle }}</h2>
                 <div class="border border-gray-dark py-2 graph-before-activity-overview">
                   <div class="mx-3 d-flex flex-column flex-items-end flex-xl-items-center overflow-hidden pt-1 height-full text-center">
-                    <calendar-heatmap
-                      :end-date="endDate"
-                      :values="heatValues"
-                      :range-color="rangeColor"
-                      height="112"
-                      width="622"
-                      tooltip-unit="posts"
-                    />
+                    <ClientOnly>
+                      <component v-if="calendarHeatmap"
+                        :is="calendarHeatmap"
+                        :end-date="endDate"
+                        :values="heatValues"
+                        :range-color="rangeColor"
+                        height="112"
+                        width="622"
+                        tooltip-unit="posts"
+                      />
+                    </ClientOnly>
                   </div>
                 </div>
               </div>
@@ -77,16 +80,14 @@ import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
 import { parseISO, format } from 'date-fns'
 import getYear from 'date-fns/getYear'
 import compareDesc from 'date-fns/compareDesc'
-import { CalendarHeatmap } from 'vue-calendar-heatmap'
 import Tags from '@theme/components/icons/Tags'
 import _ from 'lodash'
 
 export default {
-  name: 'Posts',
+  name: 'Archive',
 
   components: {
     TransitionFadeSlide,
-    CalendarHeatmap,
     Tags
   },
 
@@ -100,7 +101,8 @@ export default {
       selectedYear: thisYear,
       today: thisDay,
       todayISO: date,
-      fixed: false
+      fixed: false,
+      calendarHeatmap: null
     }
   },
 
@@ -218,6 +220,9 @@ export default {
   },
 
   mounted () {
+    const { CalendarHeatmap } = require('vue-calendar-heatmap')
+    this.calendarHeatmap = CalendarHeatmap
+
     const heatmap = document.querySelector('#heatmap')
     window.addEventListener('scroll', _.throttle(() => {
       this.fixed = heatmap.getBoundingClientRect().bottom <= 0

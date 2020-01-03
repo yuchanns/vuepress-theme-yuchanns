@@ -202,12 +202,4 @@ ul
 .h6
   font-weight 600
   font-size 12px
-
-.btn
-  color #242910
-  background-color #eff3f6
-  background-image linear-gradient(-180deg,#fafbfc,#eff3f6 90%)
-  background-position -1px -1px
-  border-radius .25rem
-  cursor pointer
 </style>

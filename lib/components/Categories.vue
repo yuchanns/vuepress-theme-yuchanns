@@ -76,9 +76,4 @@ ul
   padding-left 0
   margin-top 0
   margin-bottom 0
-
-.btn
-  color #24292e
-  background-color #eff3f6
-  background-image linear-gradient(-180deg #fafbfc #eff3f6 90%)
 </style>
