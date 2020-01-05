@@ -1,31 +1,22 @@
 <template>
   <div style="background-color: #fcfdfd">
-    <FixedHead selector='#category-head' :title="$currentCategories.key" router="/categories/" />
-    <div class="container-lg d-sm-flex flex-items-center p-responsive py-5" id="category-head">
+    <FixedHead selector='#tag-head' :title="$currentTags.key" router="/tags/" />
+    <div class="container-lg d-sm-flex flex-items-center p-responsive py-5" id="tag-head">
       <div class="col-sm-10 d-flex flex-items-center mb-3 mb-sm-0">
         <div class="border border-black-fade bg-blue-light f4 text-gray-light text-bold rounded-1 flex-shrink-0 text-center mr-3"
           style="width: 48px; height: 48px; line-height: 48px">#</div>
-        <h1 class="h1-mktg">{{ $currentCategories.key }}</h1>
+        <h1 class="h1-mktg">{{ $currentTags.key }}</h1>
       </div>
     </div>
     <div class="container-lg p-responsive">
       <div class="d-md-flex gutter-md">
         <div class="col-lg-12 col-md-8">
-          <div class="border rounded-1 box-shadow bg-white p-4 mb-5">
-            <div class="float-sm-right ml-sm-4 mb-4 text-center" v-if="logo">
-              <img :src="logo" :alt="$currentCategories.key + 'logo'"
-                width="100" height="100">
-            </div>
-            <div class="markdown-body f5 mb-2">
-              <p>{{ desc }}</p>
-            </div>
-          </div>
           <h2 class="h3-mktg text-gray">
-            Here are {{ $currentCategories.pages.length }} posts matching this category...
+            Here are {{ $currentTags.pages.length }} posts matching this tag...
           </h2>
           <article
             :key="k"
-            v-for="(page, k) in $currentCategories.pages"
+            v-for="(page, k) in $currentTags.pages"
             class="border rounded-1 box-shadow bg-gray-light my-4">
             <div class="px-3" style="border-bottom: 1px solid #d1d5da">
               <div class="d-flex flex-justify-between my-3">
@@ -64,6 +55,15 @@
               <div class="p-3">
                 <ul class="d-flex f6 list-style-none text-gray">
                   <li class="mr-4">Created {{ page.frontmatter.date | getDistanceToNow }}</li>
+                  <li class="mr-4">
+                    <span class="f6 my-1 ml-0">
+                      <router-link :to="$categories._metaMap[page.frontmatter.category].path"
+                        class="ml-0 mr-3 muted-link">
+                        <span class="category-color" :style="[getCategoryColor(page.frontmatter.category)]"></span>
+                        <span class="category">{{ page.frontmatter.category }}</span>
+                      </router-link>
+                    </span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -80,7 +80,7 @@ import Tags from '@theme/components/icons/Tags'
 import FixedHead from '@theme/components/FixedHead'
 
 export default {
-  name: 'CategoryItem',
+  name: 'TagItem',
 
   components: {
     Tags,
@@ -90,24 +90,12 @@ export default {
   filters: {
     getDistanceToNow
   },
-
-  computed: {
-    logo () {
-      const label = this.$currentCategories.key
-      if (label in this.$themeConfig.categories && 'logo' in this.$themeConfig.categories[label]) {
-        return this.$themeConfig.categories[label].logo
+  methods: {
+    getCategoryColor (label) {
+      if (label in this.$themeConfig.categories && 'color' in this.$themeConfig.categories[label]) {
+        return { backgroundColor: this.$themeConfig.categories[label].color }
       }
-
-      return false
-    },
-
-    desc () {
-      const label = this.$currentCategories.key
-      if (label in this.$themeConfig.categories && 'desc' in this.$themeConfig.categories[label]) {
-        return this.$themeConfig.categories[label].desc
-      }
-
-      return 'No decription'
+      return {}
     }
   }
 }
@@ -146,4 +134,13 @@ ul
   padding-left 0
   margin-top 0
   margin-bottom: 0
+
+.category-color
+  position relative
+  top 1px
+  display inline-block
+  width 12px
+  height 12px
+  border-radius 50%
+  background-color $accentColor
 </style>

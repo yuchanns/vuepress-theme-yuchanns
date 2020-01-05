@@ -22,8 +22,8 @@ yarn dev
 ## Basic Feature
 - [x] Home
 - [X] Post
-- [ ] Categories
-- [ ] Tags
+- [x] Categories
+- [x] Tags
 - [ ] Abouts
 - [X] PostsHeatmap
 - [ ] Avatar

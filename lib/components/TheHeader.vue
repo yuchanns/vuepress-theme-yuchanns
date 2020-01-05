@@ -24,7 +24,7 @@
           to="/"
           class="Header-link">
           <img :src="$themeConfig.logo" height="32" width="32" v-if="$themeConfig.logo">
-          <Tags 
+          <Tags
             type="mark-github"
             class="v-align-middle"
             width="32"
@@ -62,7 +62,7 @@ export default {
   line-height 1.5
   color hsla(0,0%,100%,.7)
   background-color #24292e
-  &-item 
+  &-item
     display flex
     margin-right 16px
     align-self stretch
@@ -71,10 +71,10 @@ export default {
   &-link
     font-weight 600
     color #fff
-    white-space nowrap 
+    white-space nowrap
 
 .v-align-middle
-  vertical-align middle 
+  vertical-align middle
 
 .Details
   &-content--hidden
