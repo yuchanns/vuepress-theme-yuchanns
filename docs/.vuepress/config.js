@@ -3,13 +3,19 @@ const path = require('path')
 module.exports = {
   title: 'vuepress-theme-yuchanns',
 
-  description: 'Vuepress theme of yuchanns\'s blog',
+  description: 'a Vuepress theme presented by yuchanns',
 
   theme: path.resolve(__dirname, '../../lib'),
 
   head: [
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }]
   ],
+
+  locales: {
+    '/': {
+      lang: 'en-US'
+    }
+  },
 
   markdown: {
     lineNumbers: false
@@ -38,10 +44,16 @@ module.exports = {
 
   themeConfig: {
     lang: {
-      home: 'Home'
+      home: '首页',
+      navigation: '导航',
+      categories: '分类',
+      tags: '标签',
+      archive: '归档',
+      prev: '上一篇',
+      next: '下一篇',
+      more: '更多',
+      createdAt: '创建于'
     },
-
-    nickname: 'yuchanns',
 
     pagination: {
       lengthPerPage: 5

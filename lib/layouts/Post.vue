@@ -15,12 +15,12 @@
           <div class="Box-body d-flex flex-justify-between bg-blue-light flex-column flex-md-row flex-items-start flex-md-items-center">
             <span class="pr-md-4 f6">
               <DateIcon width="15" height="15" style="vertical-align: middle;line-height: 1; display: inline-block"/>
-              <span class="lh-default v-align-middle link-gray">Created {{ $page.frontmatter.date | getDistanceToNow }}</span>
+              <span class="lh-default v-align-middle link-gray">{{ $themeConfig.lang.createdAt }} {{ $page.frontmatter.date | getDistanceToNow }}</span>
             </span>
           </div>
           <div class="Box-body d-flex flex-items-center flex-auto f6 border-bottom-0 flex-wrap flex-justify-between">
-            <span v-if="prevPage">Prev: <router-link :to="prevPage.path">{{ prevPage.title }}</router-link></span>
-            <span v-if="nextPage">Next: <router-link :to="nextPage.path">{{ nextPage.title }}</router-link></span>
+            <span v-if="prevPage" class="text-capitalize">{{ $themeConfig.lang.prev }}: <router-link :to="prevPage.path">{{ prevPage.title }}</router-link></span>
+            <span v-if="nextPage" class="text-capitalize">{{ $themeConfig.lang.next }}: <router-link :to="nextPage.path">{{ nextPage.title }}</router-link></span>
           </div>
         </div>
         <div class="Box mt-3 position-relative">
@@ -78,7 +78,7 @@ export default {
     },
     pages () {
       return this.$site.pages.filter(item => {
-        return item.id === 'Home'
+        return item.id === 'home'
       }).sort((a, b) => {
         return compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date))
       })

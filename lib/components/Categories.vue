@@ -1,9 +1,9 @@
 <template>
   <div>
-    <FixedHead selector='#categories-head' title="Categories" />
+    <FixedHead selector='#categories-head' :title="$themeConfig.lang.categories" />
     <div class="bg-gray-light border-bottom" id="categories-head">
         <div class="container-lg p-responsive text-center py-6">
-          <h1 class="h0-mktg">Categories</h1>
+          <h1 class="h0-mktg text-capitalize">{{ $themeConfig.lang.categories }}</h1>
           <p class="f4 text-gray col-md-6 mx-auto">Browse categories on {{ $site.title }}.</p>
         </div>
       </div>

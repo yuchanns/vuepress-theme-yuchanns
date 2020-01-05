@@ -174,7 +174,7 @@ export default {
 
     posts () {
       return this.$site.pages.filter(item => {
-        return item.id === 'Home'
+        return item.id === 'home'
       }).sort((a, b) => {
         return compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date))
       })

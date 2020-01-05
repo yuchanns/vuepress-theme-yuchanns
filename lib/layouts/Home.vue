@@ -1,7 +1,7 @@
 <template>
   <main>
     <FixedHead selector='#head-title'
-      title="home"
+      :title="$themeConfig.lang.home"
       :back="false"
       class="text-uppercase"
       :uppercase="true" />
@@ -11,7 +11,7 @@
           <div class="d-lg-flex gutter-lg mt-4">
             <div class="col-lg-12">
               <div class="position-relative d-md-flex flex-wrap flex-justify-between flex-items-center border-bottom border-gray-dark pb-3" id="head-title">
-                <h2 class="h6 text-uppercase">home</h2>
+                <h2 class="h6 text-uppercase">{{ $themeConfig.lang.home }}</h2>
               </div>
               <div
                 v-for="page in $pagination.pages"
@@ -56,7 +56,7 @@
                     <span class="category-color" :style="[getCategoryColor(page.frontmatter.category)]"></span>
                     <span class="category">{{ page.frontmatter.category }}</span>
                   </router-link>
-                  Created {{ page.frontmatter.date | getDistanceToNow }}
+                  {{ $themeConfig.lang.createdAt }} {{ page.frontmatter.date | getDistanceToNow }}
                 </div>
               </div>
               <Pagination />

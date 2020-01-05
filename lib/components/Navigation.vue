@@ -5,47 +5,36 @@
         <h1>{{ $siteTitle }}</h1>
       </div>
       <div class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4">
-        <h2 class="h5 mb-3 text-mono text-gray-light text-normal">Navigation</h2>
+        <h2 class="h5 mb-3 text-mono text-gray-light text-normal text-capitalize">{{ $themeConfig.lang.navigation }}</h2>
         <ul class="list-style-none text-gray f5">
           <li class="lh-condensed mb-3">
-            <router-link to="/" class="link-gray">Home</router-link>
+            <router-link to="/" class="link-gray text-capitalize">{{ $themeConfig.lang.home }}</router-link>
           </li>
           <li class="lh-condensed mb-3">
-            <router-link to="/archive" class="link-gray">Archive</router-link>
+            <router-link to="/archive" class="link-gray text-capitalize">{{ $themeConfig.lang.archive }}</router-link>
           </li>
         </ul>
       </div>
       <div class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4">
-        <h2 class="h5 mb-3 text-mono text-gray-light text-normal">Categories</h2>
+        <h2 class="h5 mb-3 text-mono text-gray-light text-normal text-capitalize">{{ $themeConfig.lang.categories }}</h2>
         <ul class="list-style-none text-gray f5">
           <li class="lh-condensed mb-3"
             v-for="(category, key) in categories"
             :key="key">
-            <router-link :to="category.path" class="link-gray text-capitalize">{{ category.title }}</router-link>
+            <router-link :to="category.path" class="link-gray text-capitalize text-capitalize">{{ category.title }}</router-link>
           </li>
         </ul>
       </div>
       <div class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4">
-        <h2 class="h5 mb-3 text-mono text-gray-light text-normal">Tags</h2>
+        <h2 class="h5 mb-3 text-mono text-gray-light text-normal text-capitalize">{{ $themeConfig.lang.tags }}</h2>
         <ul class="list-style-none text-gray f5">
           <ul class="list-style-none text-gray f5">
           <li class="lh-condensed mb-3"
             v-for="(tag, key) in tags"
             :key="key">
-            <router-link :to="tag.path" class="link-gray text-capitalize">{{ tag.title }}</router-link>
+            <router-link :to="tag.path" class="link-gray text-capitalize text-capitalize">{{ tag.title }}</router-link>
           </li>
         </ul>
-        </ul>
-      </div>
-      <div class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4">
-        <h2 class="h5 mb-3 text-mono text-gray-light text-normal">About</h2>
-        <ul class="list-style-none text-gray f5">
-          <li class="lh-condensed mb-3">
-            <router-link to="/author" class="link-gray">Me</router-link>
-          </li>
-          <li class="lh-condensed mb-3">
-            <router-link to="/contact" class="link-gray">Contact</router-link>
-          </li>
         </ul>
       </div>
     </div>
@@ -75,8 +64,8 @@ export default {
       }
 
       categories.push({
-        title: 'more',
-        path: '/categories'
+        title: this.$themeConfig.lang.more,
+        path: '/categories/'
       })
 
       return categories
@@ -97,8 +86,8 @@ export default {
       }
 
       tags.push({
-        title: 'more',
-        path: '/tags'
+        title: this.$themeConfig.lang.more,
+        path: '/tags/'
       })
 
       return tags

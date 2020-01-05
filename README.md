@@ -24,9 +24,7 @@ yarn dev
 - [X] Post
 - [x] Categories
 - [x] Tags
-- [ ] Abouts
 - [X] PostsHeatmap
-- [ ] Avatar
 
 ## LICENSE
 [MIT](https://github.com/yuchanns/vuepress-theme-yuchanns/blob/master/LICENSE)© @[yuchanns](https://github.com/yuchanns)
