@@ -47,6 +47,7 @@ import FixedHead from '@theme/components/FixedHead'
 import { getDistanceToNow } from '@theme/utils/compare-time'
 import { parseISO } from 'date-fns'
 import compareDesc from 'date-fns/compareDesc'
+import _ from 'lodash'
 
 export default {
   name: 'Post',
