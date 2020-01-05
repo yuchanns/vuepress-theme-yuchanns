@@ -1,6 +1,7 @@
 <template>
   <div style="background-color: #fcfdfd">
-    <div class="container-lg d-sm-flex flex-items-center p-responsive py-5">
+    <FixedHead selector='#category-head' :title="$currentCategories.key" router="/categories/" />
+    <div class="container-lg d-sm-flex flex-items-center p-responsive py-5" id="category-head">
       <div class="col-sm-10 d-flex flex-items-center mb-3 mb-sm-0">
         <div class="border border-black-fade bg-blue-light f4 text-gray-light text-bold rounded-1 flex-shrink-0 text-center mr-3"
           style="width: 48px; height: 48px; line-height: 48px">#</div>
@@ -76,12 +77,14 @@
 <script>
 import { getDistanceToNow } from '@theme/utils/compare-time'
 import Tags from '@theme/components/icons/Tags'
+import FixedHead from '@theme/components/FixedHead'
 
 export default {
   name: 'Category',
 
   components: {
-    Tags
+    Tags,
+    FixedHead
   },
 
   filters: {

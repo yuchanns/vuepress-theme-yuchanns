@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="pagehead pt-0 pt-lg-4" id="post-title">
+    <div class="pagehead pt-lg-4" id="post-title" style="padding-top: 20px">
       <div class="pagehead-details-cotainer clearfix container-lg p-responsive d-lg-block">
         <h1>
           <router-link to="/"><BackIcon /></router-link>
@@ -8,16 +8,7 @@
         </h1>
       </div>
     </div>
-    <div class="pagehead pt-0 pt-lg-4 width-full nav-background" v-show="fixed">
-      <div class="pagehead-details-cotainer clearfix container-lg p-responsive d-lg-block">
-        <h1>
-          <router-link to="/"><BackIcon /></router-link>
-          <span class="text-uppercase">post</span>
-          <span style="margin: 0 .25em">/</span>
-          <strong>{{ $page.title }}</strong>
-        </h1>
-      </div>
-    </div>
+    <FixedHead selector='#post-title' :title="$page.title" />
     <div class="container-lg clearfix p-responsive">
       <div class="post-content">
         <div class="Box Box--condensed d-flex flex-column flex-shrink-0">
@@ -52,23 +43,18 @@
 <script>
 import BackIcon from '@theme/components/icons/BackIcon'
 import DateIcon from '@theme/components/icons/DateIcon'
+import FixedHead from '@theme/components/FixedHead'
 import { getDistanceToNow } from '@theme/utils/compare-time'
 import { parseISO } from 'date-fns'
 import compareDesc from 'date-fns/compareDesc'
-import _ from 'lodash'
 
 export default {
   name: 'Post',
 
   components: {
     BackIcon,
-    DateIcon
-  },
-
-  data () {
-    return {
-      fixed: false
-    }
+    DateIcon,
+    FixedHead
   },
 
   computed: {
@@ -100,13 +86,6 @@ export default {
 
   filters: {
     getDistanceToNow
-  },
-
-  mounted () {
-    const navBar = document.querySelector('#post-title')
-    window.addEventListener('scroll', _.throttle(() => {
-      this.fixed = navBar.getBoundingClientRect().bottom <= 0
-    }), 100)
   }
 }
 </script>
@@ -117,14 +96,13 @@ export default {
   background-color #fafbfc
   position relative
   margin-bottom 24px
-  border-bottom 1 solid #e1e4e8
+  border-bottom 1px solid #e1e4e8
   &-details-cotainer
     margin-bottom 20px
   h1
     position relative
     float left
     max-width 635px
-    padding-left 18px
     font-size 18px
     line-height 26px
     color #586069
@@ -170,12 +148,4 @@ export default {
     margin-left 3px
     vertical-align middle
     background-color #ddd
-
-.nav-background
-  position fixed
-  z-index 999
-  padding-top 20px
-  top 0
-  border-bottom 1px solid #d1d5da
-  box-shadow 0 1px 2px rgba(0 0 0 .075)
 </style>

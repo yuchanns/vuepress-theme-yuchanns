@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="bg-gray-light border-bottom">
+    <FixedHead selector='#categories-head' title="Categories" />
+    <div class="bg-gray-light border-bottom" id="categories-head">
         <div class="container-lg p-responsive text-center py-6">
           <h1 class="h0-mktg">Categories</h1>
           <p class="f4 text-gray col-md-6 mx-auto">Browse categories on {{ $site.title }}.</p>
@@ -42,12 +43,14 @@
 
 <script>
 import Tags from '@theme/components/icons/Tags'
+import FixedHead from '@theme/components/FixedHead'
 
 export default {
   name: 'Categories',
 
   components: {
-    Tags
+    Tags,
+    FixedHead
   },
 
   methods: {

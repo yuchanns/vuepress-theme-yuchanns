@@ -1,10 +1,12 @@
 <template>
   <main>
+    <FixedHead selector='#head-title'
+      title="home"
+      :back="false"
+      class="text-uppercase"
+      :uppercase="true" />
     <div class="container-xl clearfix px-3 mt-4">
       <div class="col-12 float-md-left pl-md-2">
-        <div class="width-full top-0 UnderlineNav nav-background" v-show="fixed">
-          <span class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 text-uppercase h6">home</span>
-        </div>
         <div class="position-relative">
           <div class="d-lg-flex gutter-lg mt-4">
             <div class="col-lg-12">
@@ -70,20 +72,15 @@
 import { getDistanceToNow } from '@theme/utils/compare-time'
 import Tags from '@theme/components/icons/Tags'
 import Pagination from '@theme/components/Pagination'
-import _ from 'lodash'
+import FixedHead from '@theme/components/FixedHead'
 
 export default {
   name: 'Home',
 
   components: {
     Tags,
-    Pagination
-  },
-
-  data () {
-    return {
-      fixed: false
-    }
+    Pagination,
+    FixedHead
   },
 
   filters: {
@@ -104,12 +101,6 @@ export default {
       }
       return {}
     }
-  },
-  mounted () {
-    const navBar = document.querySelector('#head-title')
-    window.addEventListener('scroll', _.throttle(() => {
-      this.fixed = navBar.getBoundingClientRect().bottom <= 0
-    }), 100)
   }
 }
 </script>
@@ -137,24 +128,6 @@ ul
     text-align center
     border-bottom 2px solid transparent
     z-index 999
-
-.nav-background
-  background-color #fff
-  border-bottom 1px solid #d1d5da
-  position fixed
-  z-index 999
-  box-shadow 0 1px 2px rgba(0 0 0 .075)
-  &:after
-    position fixed
-    top 0
-    right 0
-    left 0
-    z-index 100
-    height 54px
-    content ""
-    background-color #fff
-    border-bottom 1px solid #d1d5da
-    box-shadow 0 1px 2px rgba(0 0 0 .075)
 
 .muted-link
   color #586069
