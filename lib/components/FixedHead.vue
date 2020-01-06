@@ -59,7 +59,7 @@ export default {
 <style lang="stylus" scoped>
 .pagehead
   padding-bottom 0
-  background-color #fafbfc
+  background-color $headBgColor
   margin-bottom 24px
   &-details-cotainer
     margin-bottom 20px

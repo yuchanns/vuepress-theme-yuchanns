@@ -70,7 +70,7 @@ export default {
       flex auto
   &-link
     font-weight 600
-    color #fff
+    color $white
     white-space nowrap
 
 .v-align-middle

@@ -94,7 +94,7 @@ export default {
 <style lang="stylus" scoped>
 .pagehead
   padding-bottom 0
-  background-color #fafbfc
+  background-color $headBgColor
   position relative
   margin-bottom 24px
   border-bottom 1px solid #e1e4e8
@@ -111,7 +111,7 @@ export default {
     margin-bottom 0
 
 .Box
-  background-color #fff
+  background-color $white
   border 1px solid #d1d5da
   border-radius 3px
   &--condensed

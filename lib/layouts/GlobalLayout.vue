@@ -31,7 +31,7 @@ export default {
 body
   font-size 14px
   line-height 1.5
-  background-color #fff
+  background-color $white
   color #24292e
   margin 0
   word-wrap break-word
@@ -222,9 +222,9 @@ mark
 
 .bg
   &-white
-    background-color #fff
+    background-color $white
   &-gray-light
-    background-color #fafbfc
+    background-color $headBgColor
   &-blue-light
     background-color #f1f8ff
 

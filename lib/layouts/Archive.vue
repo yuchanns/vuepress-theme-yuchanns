@@ -269,9 +269,9 @@ ul
   border-radius 3px
   &:hover
     text-decoration none
-    background-color #eaecef
+    background-color $gray
   &.selected
-    color #fff
+    color $white
     background-color #0366d6
 
 .post-activity h2
@@ -285,7 +285,7 @@ ul
     float none
     &:before
       left 15px
-      background-color #eaecef
+      background-color $gray
     .profile-timeline-month-heading:after
       position absolute
       top 12px
@@ -294,7 +294,7 @@ ul
       z-index -1
       height 1px
       content ""
-      background-color #eaecef
+      background-color $gray
 
 .discussion
   &-timeline
@@ -317,7 +317,7 @@ ul
     color #24292e
     text-align center
     background-color #e1e4e8
-    border 2px solid #fff
+    border 2px solid $white
     border-radius 50%
 
 .text-left

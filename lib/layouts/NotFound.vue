@@ -47,8 +47,8 @@ export default {
 <style lang="stylus" scoped>
 .btn
   color #242910
-  background-color #eff3f6
-  background-image linear-gradient(-180deg,#fafbfc,#eff3f6 90%)
+  background-color $btnColor
+  background-image linear-gradient(-180deg,$headBgColor,$btnColor 90%)
   background-position -1px -1px
   border-radius 60px
   cursor pointer
@@ -75,9 +75,9 @@ export default {
       height 4px
       vertical-align initial
       content ""
-      background #fff
+      background $white
       border-radius 4px
-      box-shadow 0 4px 0 #fff, 0 8px 0 #fff, 0 12px 0 #fff, 0 16px 0 #fff, 0 20px 0 #fff
+      box-shadow 0 4px 0 $white, 0 8px 0 $white, 0 12px 0 $white, 0 16px 0 $white, 0 20px 0 $white
       animation-name pull-string
       animation-duration .75s
       animation-fill-mode forwards

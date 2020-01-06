@@ -142,5 +142,5 @@ ul
     padding-left 16px
 
 .bg-gray-light
-  background-color #fafbfc
+  background-color $headBgColor
 </style>
