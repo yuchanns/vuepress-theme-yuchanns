@@ -248,4 +248,10 @@ mark
   &-container
     height 30px
     overflow hidden
+
+.muted-link
+  color #586069
+  &:hover
+    color $accentColor
+    text-decoration none
 </style>

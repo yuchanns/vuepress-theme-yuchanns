@@ -129,12 +129,6 @@ ul
     border-bottom 2px solid transparent
     z-index 999
 
-.muted-link
-  color #586069
-  &:hover
-    color $accentColor
-    text-decoration none
-
 .category-color
   position relative
   top 1px
