@@ -8,7 +8,7 @@ module.exports = {
   theme: path.resolve(__dirname, '../../lib'),
 
   head: [
-    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }]
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
     ['meta', { name: 'google-site-verification', content: 'h0GK-apopUhINJJe5Jp3XopZswk6EK_JQT_fVMrs6A0' }]
   ],
 
