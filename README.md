@@ -1,5 +1,8 @@
 # VuePress Blog Theme yuchanns
-> A github style blog implemented by vuepress which is still **Working In Progress**.
+
+> release v0.0.5
+
+STATUS: **WIP**
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/adac5706-bf93-419a-a239-782fa94d4358/deploy-status)](https://app.netlify.com/sites/vuepress-theme-yuchanns/deploys)
 [![CircleCI](https://circleci.com/gh/yuchanns/vuepress-theme-yuchanns/tree/master.svg?style=svg&circle-token=7d312c35e3cb469cdfef653f334741bb26052888)](https://circleci.com/gh/yuchanns/vuepress-theme-yuchanns/tree/master)
@@ -9,6 +12,11 @@
 ## Deployed On
 * [github pages](http://demo.yuchanns.xyz)
 * [netlify](https://vuepress-theme-yuchanns.yuchanns.xyz/)
+
+## Fetch
+```sh
+yarn add vuepress-theme-yuchanns # or npm install vuepress-theme-yuchanns
+```
 
 ## Dev
 Feel free to fork && pull request!

@@ -56,7 +56,7 @@
                     <span class="category-color" :style="[getCategoryColor(page.frontmatter.category)]"></span>
                     <span class="category">{{ page.frontmatter.category }}</span>
                   </router-link>
-                  {{ $themeConfig.lang.createdAt }} {{ page.frontmatter.date | getDistanceToNow }}
+                  {{ $themeConfig.lang.createdAt }} {{ formatDate(page.frontmatter.date) }}
                 </div>
               </div>
               <Pagination />
@@ -83,23 +83,16 @@ export default {
     FixedHead
   },
 
-  filters: {
-    // stripTags (value) {
-    //   const regex = /<[^>]+>/ig
-    //   if (value) {
-    //     return value.replace(regex, '')
-    //   }
-    //   return ''
-    // },
-    getDistanceToNow
-  },
-
   methods: {
     getCategoryColor (label) {
       if (label in this.$themeConfig.categories && 'color' in this.$themeConfig.categories[label]) {
         return { backgroundColor: this.$themeConfig.categories[label].color }
       }
       return {}
+    },
+
+    formatDate (date) {
+      return getDistanceToNow(date, this.$lang)
     }
   }
 }

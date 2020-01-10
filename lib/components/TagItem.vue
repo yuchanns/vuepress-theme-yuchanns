@@ -54,7 +54,7 @@
               </div>
               <div class="p-3">
                 <ul class="d-flex f6 list-style-none text-gray">
-                  <li class="mr-4">{{ $themeConfig.lang.createdAt }} {{ page.frontmatter.date | getDistanceToNow }}</li>
+                  <li class="mr-4">{{ $themeConfig.lang.createdAt }} {{  formatDate(page.frontmatter.date) }}</li>
                   <li class="mr-4">
                     <span class="f6 my-1 ml-0">
                       <router-link :to="$categories._metaMap[page.frontmatter.category].path"
@@ -87,15 +87,16 @@ export default {
     FixedHead
   },
 
-  filters: {
-    getDistanceToNow
-  },
   methods: {
     getCategoryColor (label) {
       if (label in this.$themeConfig.categories && 'color' in this.$themeConfig.categories[label]) {
         return { backgroundColor: this.$themeConfig.categories[label].color }
       }
       return {}
+    },
+
+    formatDate (date) {
+      return getDistanceToNow(date, this.$lang)
     }
   }
 }

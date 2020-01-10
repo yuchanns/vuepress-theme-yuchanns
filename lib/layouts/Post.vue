@@ -15,7 +15,7 @@
           <div class="Box-body d-flex flex-justify-between bg-blue-light flex-column flex-md-row flex-items-start flex-md-items-center">
             <span class="pr-md-4 f6">
               <DateIcon width="15" height="15" style="vertical-align: middle;line-height: 1; display: inline-block"/>
-              <span class="lh-default v-align-middle link-gray">{{ $themeConfig.lang.createdAt }} {{ $page.frontmatter.date | getDistanceToNow }}</span>
+              <span class="lh-default v-align-middle link-gray">{{ $themeConfig.lang.createdAt }} {{ formatDate($page.frontmatter.date) }}</span>
             </span>
           </div>
           <div class="Box-body d-flex flex-items-center flex-auto f6 border-bottom-0 flex-wrap flex-justify-between">
@@ -85,8 +85,10 @@ export default {
     }
   },
 
-  filters: {
-    getDistanceToNow
+  methods: {
+    formatDate (date) {
+      return getDistanceToNow(date, this.$lang)
+    }
   }
 }
 </script>
