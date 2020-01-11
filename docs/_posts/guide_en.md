@@ -1,9 +1,9 @@
 ---
 title: Usage guide for theme
-date: 2020-01-11 12:00
+date: 2020-01-01 12:00
 category: docs
 tags:
-  - en_US
+  - en
   - WIP
 ---
 A usage guide for **vuepress-theme-yuchanns**
