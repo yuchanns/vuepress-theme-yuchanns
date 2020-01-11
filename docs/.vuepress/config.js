@@ -14,7 +14,7 @@ module.exports = {
 
   locales: {
     '/': {
-      lang: 'zh-CN'
+      lang: 'en-US'
     }
   },
 
@@ -45,14 +45,14 @@ module.exports = {
 
   themeConfig: {
     lang: {
-      home: '首页',
-      navigation: '导航',
+      home: 'home',
+      navigation: 'navigation',
       categories: '分类',
       tags: '标签',
       archive: '归档',
-      prev: '上一篇',
-      next: '下一篇',
-      more: '更多',
+      prev: 'prev',
+      next: 'next',
+      more: 'more',
       createdAt: '创建于'
     },
 
@@ -84,8 +84,7 @@ module.exports = {
     },
 
     categories: {
-      Vue: { color: '#2c3e50', logo: '/images/vue.png', desc: 'Vue.js is a JavaScript framework for building interactive web applications.' },
-      Document: { color: '#e34c26', desc: 'Document is a guidebook for users.' }
+      docs: { color: '#e34c26', desc: 'Showing the usage of vuepress-theme-yuchanns.展示本主题的使用方法' }
     }
   }
 }

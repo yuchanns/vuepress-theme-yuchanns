@@ -1,188 +1,181 @@
 ---
-title: Markdown-it
-date: 2019-12-29 12:00:00
-category: Document
+title: 主题使用指南
+date: 2020-01-11 12:00
+category: docs
 tags:
-  - markdown
+  - 中文
+  - WIP
 ---
-
-# h1 Heading 8-)
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
-
-
-## Horizontal Rules
-
-___
-
----
-
-***
-
-
-## Emphasis
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-
-
-## Blockquotes
-
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
-
-
-## Lists
-
-Unordered
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting and line highlighting
-
-``` js {5}
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-Line numbers mode
-
-![line-numbers-mode](/images/line-numbers-mode.png "line-numbers-mode")
-
-## Tables
-
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-Right aligned columns
-
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
-
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19<sup>th</sup>
-- H<sub>2</sub>O
-
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-<ins>Inserted text</ins>
-
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
-
-<mark>Marked text</mark>
-
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-:::warning
-*Your site is having problems building: Page build failed.*
-:::
+**vuepress-theme-yuchanns**主题使用指南
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/adac5706-bf93-419a-a239-782fa94d4358/deploy-status)](https://app.netlify.com/sites/vuepress-theme-yuchanns/deploys)
+[![CircleCI](https://circleci.com/gh/yuchanns/vuepress-theme-yuchanns/tree/master.svg?style=svg&circle-token=7d312c35e3cb469cdfef653f334741bb26052888)](https://circleci.com/gh/yuchanns/vuepress-theme-yuchanns/tree/master)
+[![Actions Status](https://github.com/yuchanns/vuepress-theme-yuchanns/workflows/Node%20CI/badge.svg)](https://github.com/yuchanns/vuepress-theme-yuchanns/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/yuchanns/vuepress-theme-yuchanns/blob/master/LICENSE)
 
 :::tip
-*Display a "Sponsor" button*
-:::
+vuepress-theme-yuchanns是一个模仿github风格的主题皮肤，刚刚诞生不久，采用[MIT](https://github.com/yuchanns/vuepress-theme-yuchanns/blob/master/LICENSE)许可证模式发布。
 
-:::danger
-*Delete this repository*
+欢迎发表[issue](https://github.com/yuchanns/vuepress-theme-yuchanns/issues/new)提出feature需求，或者创建[pr](https://github.com/yuchanns/vuepress-theme-yuchanns/compare)推送自己的想法参与到代码贡献中！
 :::
+<!-- more -->
+
+[[toc]]
+
+## 快速使用
+:::danger 警示
+本主题当前版本为<mark>v0.0.5</mark>，尚在快速开发中，可能会有颠覆性更改。请勿冒险用于正式产品中！
+:::
+### 全新使用
+第一次使用`Vuepress`？关于`Vuepress`的使用方法，请参考[官方文档](https://vuepress.vuejs.org/zh/)
+
+假设你的项目结构如下：
+```sh
+.
+├─ docs            # 博客目录
+│  ├─ _posts       # 博文目录
+│  └─ .vuepress    # 主题配置目录
+│     └─ config.js # 主题配置文件
+└─ package.json
+```
+### 获取主题
+在一个`Vuepress`项目中执行安装本主题：
+```sh
+yarn add vuepress-theme-yuchanns # 或者 npm install vuepress-theme-yuchanns
+```
+然后到`.vuepress/config.js`中将**theme**一项配置改成本主题名称缩写`yuchanns`
+```js
+// .vuepress/config.js
+
+module.exports = {
+  theme: 'yuchanns'
+}
+```
+接着在`package.json`中加入以下脚本：
+```js
+{
+  "scripts": {
+    "dev": "uepress dev docs --no-cache --temp .temp",
+    "build": "vuepress build docs --dest docs-dist"
+  }
+}
+```
+然后在项目根目录下执行`yarn dev`(或者`npm run dev`)，访问localhost:8080即可查看本主题效果。
+
+执行`yarn build`(或者`npm run build`)，即可产出静态页面用于部署。
+
+## 配置概览
+### 基本特性
+本主题目前只具备博客的最基本功能，除此之外，也具有一些特色特性——
+
+
+#### 基本功能：
+* 首页
+* 文章
+* 分类
+* 标签
+* 归档
+
+#### 主题特性：
+* 归档热图(github贡献度风格)
+* 首页分类标志颜色定制
+* 分类图标和分类说明定制
+* 社交服务导航
+
+### 主题通用配置
+<details>
+<summary>点此展开</summary>
+
+```js
+module.exports = {
+  title: 'vuepress-theme-yuchanns',
+
+  description: 'a Vuepress theme presented by yuchanns',
+
+  theme: 'yuchanns',
+
+  locales: {
+    '/': {
+      lang: 'en-US'
+    }
+  },
+
+  themeConfig: {
+    lang: {
+      home: 'home',
+      navigation: 'navigation',
+      categories: '分类',
+      tags: '标签',
+      archive: '归档',
+      prev: 'prev',
+      next: 'next',
+      more: 'more',
+      createdAt: '创建于'
+    },
+
+    pagination: {
+      lengthPerPage: 5
+    },
+
+    sns: {
+      github: {
+        account: 'yuchanns',
+        link: 'https://github.com/yuchanns'
+      },
+      twitter: {
+        account: 'airamusume',
+        link: 'https://twitter.com/airamusume'
+      },
+      facebook: {
+        account: 'airamusume',
+        link: 'https://www.facebook.com/airamusume'
+      },
+      youtube: {
+        account: 'Github',
+        link: 'https://www.youtube.com/github'
+      },
+      linkedin: {
+        account: 'Github',
+        link: 'https://www.linkedin.com/company/github'
+      }
+    },
+
+    categories: {
+      docs: { color: '#e34c26', desc: 'Showing the usage of vuepress-theme-yuchanns.展示本主题的使用方法' }
+    }
+  }
+}
+```
+</details>
+
+## 配置详解
+### 语言支持
+本主题目前支持中文和英文，只需在`locales`中配置`lang`为`zh-CN`或`en-US`即可切换到对应语言。
+
+如果你有其他的语言需求，欢迎到issue中提出，我会将其加入支持。
+
+### 语言局部定制
+如果你对局部语言有特殊需要(例如本主题，整体语言为`en_US`，但是局部进行了中文化处理)，可以分别对一些部分的名词进行自定义：
+:::tip
+支持的范围包括：
+
+首页、分类、标签、导航、归档、分页和时间提示语
+:::
+只需在`themeConfig.lang`中添加对应的字段和值即可实现。
+
+### 分页数设置
+使用`themeConfig.pagination.lengthPerPage`进行设置。
+
+### 社交服务导航
+在`themeConfig.sns`中设置社交服务。目前支持：github、twitter、facebook、youtube、linkedin。欢迎在issue中提出扩展需求。
+
+### 分类个性定制
+分类不再仅仅是一段简单的名称，你可以让首页的分类变得五颜六色，可以在分类列表页展示极具分类特征的个性化logo，也可以用简练的文字说明介绍分类的内容，一切尽在`themeConfig.categories`配置项中。
+
+本配置项为一个对象，其中属性名为分类名，属性值为分类配置。
+
+在分类配置中，使用`color`设定首页分类颜色，使用`desc`对分类做出说明，通过`logo`给出个性化logo的图片地址——还有什么更好的想法？提出来一起分享吧！
+
+## 鸣谢
+* [Vuepress](https://github.com/vuejs/vuepress) 提供了如此方便的静态网页生成器
+* [vuepress-theme-meteorlxy](https://github.com/meteorlxy/vuepress-theme-meteorlxy) 提供了源码参考

@@ -32,7 +32,7 @@ yarn dev
 - [X] Post
 - [x] Categories
 - [x] Tags
-- [X] PostsHeatmap
+- [X] ArchiveHeatmap
 
 ## LICENSE
 [MIT](https://github.com/yuchanns/vuepress-theme-yuchanns/blob/master/LICENSE)© @[yuchanns](https://github.com/yuchanns)
