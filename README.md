@@ -9,6 +9,10 @@ STATUS: **WIP**
 [![Actions Status](https://github.com/yuchanns/vuepress-theme-yuchanns/workflows/Node%20CI/badge.svg)](https://github.com/yuchanns/vuepress-theme-yuchanns/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/yuchanns/vuepress-theme-yuchanns/blob/master/LICENSE)
 
+## Document
+* [English](https://vuepress-theme-yuchanns.xyz/posts/2020/01/11/guide-en/)
+* [中文](posts/2020/01/11/guide/)
+
 ## Deployed On
 * [github pages](http://demo.yuchanns.xyz)
 * [netlify](https://vuepress-theme-yuchanns.yuchanns.xyz/)
