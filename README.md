@@ -10,8 +10,8 @@ STATUS: **WIP**
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/yuchanns/vuepress-theme-yuchanns/blob/master/LICENSE)
 
 ## Document
-* [English](https://vuepress-theme-yuchanns.xyz/posts/2020/01/11/guide-en/)
-* [中文](posts/2020/01/11/guide/)
+* [English](https://vuepress-theme-yuchanns.yuchanns.xyz/posts/2020/01/01/guide-en/)
+* [中文](https://vuepress-theme-yuchanns.yuchanns.xyz/posts/2019/12/31/guide/)
 
 ## Deployed On
 * [github pages](http://demo.yuchanns.xyz)
