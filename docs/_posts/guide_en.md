@@ -20,6 +20,11 @@ Feel free to open an request [issue](https://github.com/yuchanns/vuepress-theme-
 :::
 <!-- more -->
 
+[[toc]]
+
+## Blog Using This Theme
+* [yuchanns'Atelier](https://yuchanns.org)
+
 ## Quick Start
 :::danger Attention
 Theme version is now on <mark>v0.0.5</mark> and still work in progress. There maybe breakable changes. Do not use it in product environment.

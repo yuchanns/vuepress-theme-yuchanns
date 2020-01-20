@@ -22,6 +22,9 @@ vuepress-theme-yuchanns是一个模仿github风格的主题皮肤，刚刚诞生
 
 [[toc]]
 
+## 使用本主题的博客
+* [yuchanns'Atelier](https://yuchanns.org)
+
 ## 快速使用
 :::danger 警示
 本主题当前版本为<mark>v0.0.5</mark>，尚在快速开发中，可能会有颠覆性更改。请勿冒险用于正式产品中！
