@@ -272,7 +272,7 @@ ul
     background-color $gray
   &.selected
     color $white
-    background-color #0366d6
+    background-color $accentColor
 
 .post-activity h2
   margin 30px 0 15px

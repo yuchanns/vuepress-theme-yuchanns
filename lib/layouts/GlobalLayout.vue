@@ -197,7 +197,7 @@ mark
   &-dark
     color #24292e
     &:hover
-      color #0366d6
+      color $accentColor
 
 .lh-condensed
   line-height 1.25
