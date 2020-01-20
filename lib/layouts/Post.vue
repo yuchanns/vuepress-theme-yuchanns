@@ -44,7 +44,6 @@
 
 <script>
 import BackIcon from '@theme/components/icons/BackIcon'
-import DateIcon from '@theme/components/icons/DateIcon'
 import FixedHead from '@theme/components/FixedHead'
 import { getDistanceToNow, getDistanceToNowUnixNano } from '@theme/utils/compare-time'
 import { parseISO } from 'date-fns'
@@ -56,7 +55,6 @@ export default {
 
   components: {
     BackIcon,
-    DateIcon,
     FixedHead
   },
 
