@@ -13,10 +13,12 @@
       <div class="post-content">
         <div class="Box Box--condensed d-flex flex-column flex-shrink-0">
           <div class="Box-body d-flex flex-justify-between bg-blue-light flex-column flex-md-row flex-items-start flex-md-items-center">
-            <span class="pr-md-4 f6">
-              <DateIcon width="15" height="15" style="vertical-align: middle;line-height: 1; display: inline-block"/>
+            <div class="pr-md-4 f6">
               <span class="lh-default v-align-middle link-gray">{{ $themeConfig.lang.createdAt }} {{ formatDate($page.frontmatter.date) }}</span>
-            </span>
+            </div>
+            <div class="no-wrap d-flex flex-self-start flex-items-baseline">
+              <span class="mr-1 f6 link-gray">{{ $themeConfig.lang.updatedAt }} {{ formatDateUnixNano($page.lastUpdated) }}</span>
+            </div>
           </div>
           <div class="Box-body d-flex flex-items-center flex-auto f6 border-bottom-0 flex-wrap flex-justify-between">
             <span v-if="prevPage" class="text-capitalize">{{ $themeConfig.lang.prev }}: <router-link :to="prevPage.path">{{ prevPage.title }}</router-link></span>
@@ -44,7 +46,7 @@
 import BackIcon from '@theme/components/icons/BackIcon'
 import DateIcon from '@theme/components/icons/DateIcon'
 import FixedHead from '@theme/components/FixedHead'
-import { getDistanceToNow } from '@theme/utils/compare-time'
+import { getDistanceToNow, getDistanceToNowUnixNano } from '@theme/utils/compare-time'
 import { parseISO } from 'date-fns'
 import compareDesc from 'date-fns/compareDesc'
 import _ from 'lodash'
@@ -88,6 +90,10 @@ export default {
   methods: {
     formatDate (date) {
       return getDistanceToNow(date, this.$lang)
+    },
+
+    formatDateUnixNano (timestamp) {
+      return getDistanceToNowUnixNano(timestamp, this.$lang)
     }
   }
 }
