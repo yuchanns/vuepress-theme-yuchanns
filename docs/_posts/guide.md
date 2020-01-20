@@ -113,7 +113,8 @@ module.exports = {
       prev: 'prev',
       next: 'next',
       more: 'more',
-      createdAt: '创建于'
+      createdAt: '创建于',
+      updatedAt: '更新于'
     },
 
     pagination: {
