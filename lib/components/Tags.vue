@@ -4,12 +4,12 @@
     <div class="bg-gray-light border-bottom" id="tags-head">
         <div class="container-lg p-responsive text-center py-6">
           <h1 class="h0-mktg">Tags</h1>
-          <p class="f4 text-gray col-md-6 mx-auto">Browse tags on {{ $site.title }}.</p>
+          <p class="f4 text-gray col-md-6 mx-auto">{{ tagTip }}.</p>
         </div>
       </div>
       <div class="d-lg-flex container-lg p-responsive">
         <div class="position-relative mb-6" style="width: 100%">
-          <h2 class="h2-mktg">All featured tags</h2>
+          <h2 class="h2-mktg">{{ $themeConfig.lang.tagSubTitle }}</h2>
           <ul class="list-style-none">
             <li class="py-4 border-bottom"
               :key="key"
@@ -49,6 +49,13 @@ export default {
   components: {
     TagsIcon,
     FixedHead
+  },
+
+  computed: {
+    tagTip () {
+      const lang = require(`@theme/langs/${this.$themeConfig.lang.lang}`)
+      return lang.tagTip(this.$site.title)
+    }
   },
 
   methods: {

@@ -6,7 +6,7 @@
           <div class="d-flex">
             <div class="col-12 col-lg-10">
               <div class="position-relative" id="heatmap">
-                <h2 class="f4 text-normal mb-2">{{ postsLastYear.length }} posts in {{ heatTitle }}</h2>
+                <h2 class="f4 text-normal mb-2">{{ archiveTip }}</h2>
                 <div class="border border-gray-dark py-2 graph-before-activity-overview">
                   <div class="mx-3 d-flex flex-column flex-items-end flex-xl-items-center overflow-hidden pt-1 height-full text-center">
                     <ClientOnly>
@@ -25,7 +25,7 @@
               </div>
               <div class="post-activity">
                 <h2 class="f4 text-normal mb-2">
-                  Post activity
+                  {{ $themeConfig.lang.postTip }}
                 </h2>
                 <div class="float-left col-12">
                   <TransitionFadeSlide group>
@@ -121,12 +121,18 @@ export default {
   },
 
   computed: {
+    archiveTip () {
+      const lang = require(`@theme/langs/${this.$themeConfig.lang.lang}`)
+      return lang.archiveTip(this.postsLastYear.length, this.heatTitle)
+    },
+
     heatTitle () {
       if (this.selectedYear !== this.year.end) {
         return this.selectedYear
       }
 
-      return 'the last year'
+      const lang = require(`@theme/langs/${this.$themeConfig.lang.lang}`)
+      return lang.archiveLastYear
     },
 
     endDate () {

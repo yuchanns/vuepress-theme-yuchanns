@@ -21,7 +21,7 @@
             </div>
           </div>
           <h2 class="h3-mktg text-gray">
-            Here are {{ $currentCategories.pages.length }} posts matching this category...
+            {{ categoryItemTip }}...
           </h2>
           <article
             :key="k"
@@ -94,6 +94,11 @@ export default {
   },
 
   computed: {
+    categoryItemTip () {
+      const lang = require(`@theme/langs/${this.$themeConfig.lang.lang}`)
+      return lang.categoryItemTip(this.$currentCategories.pages.length)
+    },
+
     logo () {
       const label = this.$currentCategories.key
       if (label in this.$themeConfig.categories && 'logo' in this.$themeConfig.categories[label]) {

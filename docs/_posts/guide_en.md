@@ -103,18 +103,7 @@ module.exports = {
   },
 
   themeConfig: {
-    lang: {
-      home: 'home',
-      navigation: 'navigation',
-      categories: '分类',
-      tags: '标签',
-      archive: '归档',
-      prev: 'prev',
-      next: 'next',
-      more: 'more',
-      createdAt: '创建于',
-      updatedAt: '更新于'
-    },
+    lang: 'en-US',
 
     pagination: {
       lengthPerPage: 5
@@ -160,12 +149,18 @@ Require other languages in an issue, so theme will add to support it.
 ### Parts of Language Customizing
 
 If you need to customize parts of language, just do it:
-:::tip
-Parts including:
 
-home, categories, tags, navigation, archive, pagination and date hints
-:::
-Add values to corresponding properties of `themeConfig.lang`.
+Import theme's language package in `themeConfig.lang` and then cover values to corresponding properties.
+
+```js
+themeConfig: {
+  lang: Object.assign(require('vuepress-theme-yuchanns/lib/langs/en-US'), {
+      navigation: '首页',
+      categories: '分类',
+      tags: '标签'
+    })
+}
+```
 
 ### Lengthe Per Page
 Configuring by `themeConfig.pagination.lengthPerPage`.

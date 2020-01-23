@@ -14,7 +14,7 @@ module.exports = {
 
   locales: {
     '/': {
-      lang: 'en-US'
+      lang: 'zh-CN'
     }
   },
 
@@ -44,18 +44,7 @@ module.exports = {
   },
 
   themeConfig: {
-    lang: {
-      home: 'home',
-      navigation: 'navigation',
-      categories: '分类',
-      tags: '标签',
-      archive: '归档',
-      prev: 'prev',
-      next: 'next',
-      more: 'more',
-      createdAt: '创建于',
-      updatedAt: '更新于'
-    },
+    lang: 'zh-CN',
 
     pagination: {
       lengthPerPage: 5

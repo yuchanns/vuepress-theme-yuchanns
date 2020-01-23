@@ -104,18 +104,7 @@ module.exports = {
   },
 
   themeConfig: {
-    lang: {
-      home: 'home',
-      navigation: 'navigation',
-      categories: '分类',
-      tags: '标签',
-      archive: '归档',
-      prev: 'prev',
-      next: 'next',
-      more: 'more',
-      createdAt: '创建于',
-      updatedAt: '更新于'
-    },
+    lang: 'en-US',
 
     pagination: {
       lengthPerPage: 5
@@ -159,13 +148,19 @@ module.exports = {
 如果你有其他的语言需求，欢迎到issue中提出，我会将其加入支持。
 
 ### 语言局部定制
-如果你对局部语言有特殊需要(例如本主题，整体语言为`en_US`，但是局部进行了中文化处理)，可以分别对一些部分的名词进行自定义：
-:::tip
-支持的范围包括：
+如果你对局部语言有特殊需要(例如本主题，整体语言为`en-US`，但是局部进行了中文化处理)，可以分别对一些部分的名词进行自定义：
 
-首页、分类、标签、导航、归档、分页和时间提示语
-:::
-只需在`themeConfig.lang`中添加对应的字段和值即可实现。
+只需在`themeConfig.lang`中引入主题的语言包，并覆盖相应字段即可。
+
+```js
+themeConfig: {
+  lang: Object.assign(require('vuepress-theme-yuchanns/lib/langs/en-US'), {
+      navigation: '首页',
+      categories: '分类',
+      tags: '标签'
+    })
+}
+```
 
 ### 分页数设置
 使用`themeConfig.pagination.lengthPerPage`进行设置。

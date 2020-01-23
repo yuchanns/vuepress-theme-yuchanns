@@ -1,6 +1,6 @@
 # VuePress Blog Theme yuchanns
 
-> release v0.0.6
+> release v0.0.7
 
 STATUS: **WIP**
 
@@ -37,6 +37,7 @@ yarn dev
 - [x] Categories
 - [x] Tags
 - [X] ArchiveHeatmap
+- [X] Internationalization
 
 ## LICENSE
 [MIT](https://github.com/yuchanns/vuepress-theme-yuchanns/blob/master/LICENSE)© @[yuchanns](https://github.com/yuchanns)

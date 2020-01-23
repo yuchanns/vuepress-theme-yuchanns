@@ -12,7 +12,7 @@
       <div class="d-md-flex gutter-md">
         <div class="col-lg-12 col-md-8">
           <h2 class="h3-mktg text-gray">
-            Here are {{ $currentTags.pages.length }} posts matching this tag...
+            {{ tagItemTip }}...
           </h2>
           <article
             :key="k"
@@ -85,6 +85,13 @@ export default {
   components: {
     Tags,
     FixedHead
+  },
+
+  computed: {
+    tagItemTip () {
+      const lang = require(`@theme/langs/${this.$themeConfig.lang.lang}`)
+      return lang.tagItemTip(this.$currentTags.pages.length)
+    }
   },
 
   methods: {

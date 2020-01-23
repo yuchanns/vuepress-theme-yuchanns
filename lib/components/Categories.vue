@@ -4,12 +4,12 @@
     <div class="bg-gray-light border-bottom" id="categories-head">
         <div class="container-lg p-responsive text-center py-6">
           <h1 class="h0-mktg text-capitalize">{{ $themeConfig.lang.categories }}</h1>
-          <p class="f4 text-gray col-md-6 mx-auto">Browse categories on {{ $site.title }}.</p>
+          <p class="f4 text-gray col-md-6 mx-auto">{{ categoryTip }}.</p>
         </div>
       </div>
       <div class="d-lg-flex container-lg p-responsive">
         <div class="position-relative mb-6" style="width: 100%">
-          <h2 class="h2-mktg">All featured categories</h2>
+          <h2 class="h2-mktg">{{ $themeConfig.lang.categorySubTitle }}</h2>
           <ul class="list-style-none">
             <li class="py-4 border-bottom"
               :key="key"
@@ -51,6 +51,13 @@ export default {
   components: {
     Tags,
     FixedHead
+  },
+
+  computed: {
+    categoryTip () {
+      const lang = require(`@theme/langs/${this.$themeConfig.lang.lang}`)
+      return lang.categoryTip(this.$site.title)
+    }
   },
 
   methods: {
