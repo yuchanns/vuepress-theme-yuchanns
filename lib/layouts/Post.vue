@@ -17,7 +17,7 @@
               <span class="lh-default v-align-middle link-gray">{{ $themeConfig.lang.createdAt }} {{ formatDate($page.frontmatter.date) }}</span>
             </div>
             <div class="no-wrap d-flex flex-self-start flex-items-baseline">
-              <span class="mr-1 f6 link-gray">{{ $themeConfig.lang.updatedAt }} {{ formatDateUnixNano($page.lastUpdated) }}</span>
+              <span class="mr-1 f6 link-gray">{{ $themeConfig.lang.updatedAt }} {{ $page.lastUpdated ? formatDateUnixNano($page.lastUpdated) : formatDate($page.frontmatter.date) }}</span>
             </div>
           </div>
           <div class="Box-body d-flex flex-items-center flex-auto f6 border-bottom-0 flex-wrap flex-justify-between">
