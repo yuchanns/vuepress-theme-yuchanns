@@ -77,6 +77,7 @@ This theme implemented only basic features for now. Still you can find something
 * Categories
 * Tags
 * Archive
+* Internationalization
 
 #### Special
 * Archive Heatmap (contribution of github style)
