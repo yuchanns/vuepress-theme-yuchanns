@@ -33,11 +33,18 @@ yarn dev
 
 ## Basic Feature
 - [x] Home
-- [X] Post
+- [x] Post
 - [x] Categories
 - [x] Tags
-- [X] ArchiveHeatmap
-- [X] Internationalization
+- [x] ArchiveHeatmap
+- [x] Internationalization
+
+## Preview
+![home](./preview/home.png "home")
+![post](./preview/post.png "post")
+![archive](./preview/archive.png "archive")
+![categories](./preview/categories.png "categories")
+![category](./preview/category.png "category")
 
 ## LICENSE
 [MIT](https://github.com/yuchanns/vuepress-theme-yuchanns/blob/master/LICENSE)© @[yuchanns](https://github.com/yuchanns)
