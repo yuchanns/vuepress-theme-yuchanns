@@ -5,6 +5,7 @@ category: docs
 tags:
   - 中文
   - WIP
+pinned: 1
 ---
 **vuepress-theme-yuchanns**主题使用指南
 
@@ -85,6 +86,7 @@ module.exports = {
 * 首页分类标志颜色定制
 * 分类图标和分类说明定制
 * 社交服务导航
+* 文章置顶
 
 ### 主题通用配置
 <details>
@@ -175,6 +177,9 @@ themeConfig: {
 本配置项为一个对象，其中属性名为分类名，属性值为分类配置。
 
 在分类配置中，使用`color`设定首页分类颜色，使用`desc`对分类做出说明，通过`logo`给出个性化logo的图片地址——还有什么更好的想法？提出来一起分享吧！
+
+### 文章置顶
+在文章的`frontmatter`中添加<mark>pinned: 数字</mark>可以置顶文章。其中数字以升序方式排列置顶顺序。
 
 ## 鸣谢
 * [Vuepress](https://github.com/vuejs/vuepress) 提供了如此方便的静态网页生成器

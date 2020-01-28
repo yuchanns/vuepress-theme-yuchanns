@@ -199,10 +199,13 @@ mark
     &:hover
       color $accentColor
 
-.lh-condensed
-  line-height 1.25
-  &-ultra
-    line-height 1
+.lh
+  &-default
+    line-height 1.5
+  &-condensed
+    line-height 1.25
+    &-ultra
+      line-height 1
 
 .list-style-none
   list-style none

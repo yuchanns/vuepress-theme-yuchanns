@@ -5,6 +5,7 @@ category: docs
 tags:
   - en
   - WIP
+pinned: 2
 ---
 A usage guide for **vuepress-theme-yuchanns**
 
@@ -84,6 +85,7 @@ This theme implemented only basic features for now. Still you can find something
 * Custom icons color in home page
 * Logo and description in categories page
 * Sns
+* Pinned Posts
 
 ### General Configration
 <details>
@@ -175,6 +177,9 @@ The categories is more than just one short name, can be further colorful and dis
 It is an object with properties named by categories, which values containing configration.
 
 Coloring in `color`, describing in `desc` and providing logo in `logo`. Now sharing your better ideas!
+
+### Pinned Posts
+You can pinned posts by adding <mark>pinned: number</mark> in the `frontmatter` of posts. Numbers are used for sorting pinned posts ascending order.
 
 ## Thanks
 * [Vuepress](https://github.com/vuejs/vuepress)

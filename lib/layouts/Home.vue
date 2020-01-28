@@ -14,7 +14,7 @@
                 <h2 class="h6 text-uppercase">{{ $themeConfig.lang.home }}</h2>
               </div>
               <div
-                v-for="page in $pagination.pages"
+                v-for="page in posts"
                 :key="page.key"
                 class="col-12 d-block width-full py-4 border-bottom">
                 <div class="d-inline-block mb-1">
@@ -57,6 +57,7 @@
                     <span class="category">{{ page.frontmatter.category }}</span>
                   </router-link>
                   {{ $themeConfig.lang.createdAt }} {{ formatDate(page.frontmatter.date) }}
+                  <span class="labels lh-default d-inline-block" v-if="'pinned' in page.frontmatter">{{ $themeConfig.lang.pinned }}</span>
                 </div>
               </div>
               <Pagination />
@@ -93,6 +94,27 @@ export default {
 
     formatDate (date) {
       return getDistanceToNow(date, this.$lang)
+    }
+  },
+
+  computed: {
+    posts () {
+      const pages = this.$pagination.pages
+
+      const pagesPinned = pages.filter(page => {
+        return 'pinned' in page.frontmatter
+      }).sort((a, b) => {
+        if (a.frontmatter.pinned < b.frontmatter.pinned) {
+          return -1
+        }
+        return 1
+      })
+
+      const pagesUnpinned = pages.filter(page => {
+        return !('pinned' in page.frontmatter)
+      })
+
+      return pagesPinned.concat(pagesUnpinned)
     }
   }
 }
@@ -149,4 +171,16 @@ ul
 .h6
   font-weight 600
   font-size 12px
+
+.labels
+  position relative
+  color white
+  background-color $accentColor
+  height 20px
+  padding .15em 4px
+  font-size 12px
+  font-weight 600
+  line-height 15px
+  border-radius 2px
+  box-shadow inset 0 -1px 0 rgba(27 31 35 .12)
 </style>
