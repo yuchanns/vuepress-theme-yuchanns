@@ -16,7 +16,7 @@
           </h2>
           <article
             :key="k"
-            v-for="(page, k) in $currentTags.pages"
+            v-for="(page, k) in posts"
             class="border rounded-1 box-shadow bg-gray-light my-4">
             <div class="px-3" style="border-bottom: 1px solid #d1d5da">
               <div class="d-flex flex-justify-between my-3">
@@ -78,6 +78,8 @@
 import { getDistanceToNow } from '@theme/utils/compare-time'
 import Tags from '@theme/components/icons/Tags'
 import FixedHead from '@theme/components/FixedHead'
+import compareDesc from 'date-fns/compareDesc'
+import { parseISO } from 'date-fns'
 
 export default {
   name: 'TagItem',
@@ -91,6 +93,12 @@ export default {
     tagItemTip () {
       const lang = require(`@theme/langs/${this.$themeConfig.lang.lang}`)
       return lang.tagItemTip(this.$currentTags.pages.length)
+    },
+    posts () {
+      const posts = this.$currentTags.pages
+      return posts.sort((a, b) => {
+        return compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date))
+      })
     }
   },
 
