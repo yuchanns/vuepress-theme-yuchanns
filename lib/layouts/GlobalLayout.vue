@@ -261,6 +261,8 @@ mark
 .search-box
   width 100%
   margin-right 0
+  .suggestions
+    z-index 999
   input
     padding 6px 8px
     vertical-align middle
