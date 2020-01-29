@@ -1,6 +1,6 @@
 # VuePress Blog Theme yuchanns
 
-> release v0.0.12
+> release v0.0.13
 
 STATUS: **WIP**
 
