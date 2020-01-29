@@ -32,23 +32,64 @@
             v-else/>
         </router-link>
       </div>
+      <div class="Header-item Header-item--ful flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-lg-0">
+        <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 position-relative">
+          <label class="form-control header-search-wrapper input-sm p-0 position-relative d-flex flex-justify-between flex-items-center">
+            <!-- <input type="text" class="form-control input-sm header-search-input" placeholder="Search..."> -->
+            <SearchBox />
+          </label>
+        </div>
+      </div>
     </header>
   </div>
 </template>
 
 <script>
 import Tags from '@theme/components/icons/Tags'
+import SearchBox from '@SearchBox'
 
 export default {
   name: 'TheHeader',
 
+  data () {
+    return {
+      search: ''
+    }
+  },
+
   components: {
-    Tags
+    Tags,
+    SearchBox
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+label
+  font-weight 600
+
+.input-sm
+  min-height 28px
+  padding-top 3px
+  padding-bottom 3px
+  font-size 12px
+  line-height 20px
+
+.form-control
+  min-height 34px
+  padding 6px 8px
+  font-size 16px
+  line-height 20px
+  color #24292e
+  vertical-align middle
+  background-color #fff
+  background-repeat no-repeat
+  background-position right 8px center
+  border 1px solid #d1d5da
+  border-radius 3px
+  outline none
+  box-shadow inset 0 1px 2px rgba(27 31 35 .075)
+
 .Header
 .Header-item
   align-items center
@@ -72,6 +113,33 @@ export default {
     font-weight 600
     color $white
     white-space nowrap
+
+.header-search
+  min-width 300px
+  transition .2s ease-in-out
+  transition-property min-width,padding-bottom,padding-top
+  &-wrapper
+    display table
+    width 100%
+    max-width 100%
+    padding 0
+    font-size inherit
+    font-weight 400
+    color #fff
+    vertical-align middle
+    background-color hsla(0 0% 100% .125)
+    border 0
+    box-shadow none
+  &-input
+    display table-cell
+    width 100%
+    padding-top 0
+    padding-bottom 0
+    font-size inherit
+    color inherit
+    background none
+    border 0
+    box-shadow none
 
 .v-align-middle
   vertical-align middle

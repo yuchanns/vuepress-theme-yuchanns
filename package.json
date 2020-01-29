@@ -30,6 +30,7 @@
     "vuepress": "^1.2.0"
   },
   "devDependencies": {
+    "@vuepress/plugin-search": "^1.2.0",
     "@vuepress/shared-utils": "^1.2.0",
     "eslint": "6.3.0",
     "eslint-config-standard": "^14.1.0",

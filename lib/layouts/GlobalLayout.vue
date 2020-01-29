@@ -257,4 +257,32 @@ mark
   &:hover
     color $accentColor
     text-decoration none
+
+.search-box
+  width 100%
+  margin-right 0
+  input
+    padding 6px 8px
+    vertical-align middle
+    background-repeat no-repeat
+    background-position right 8px center
+    border-radius 3px
+    outline none
+    box-shadow inset 0 1px 2px rgba(27 31 35 .075)
+    display table-cell
+    width 100%
+    padding-top 0
+    padding-bottom 0
+    font-size inherit
+    color inherit
+    background none
+    border 0
+    box-shadow none
+    left 0
+    &:focus
+      color #24292e
+      background-color #fff
+      border 1px solid #d1d5da
+      font-size 16px
+      width 100%
 </style>
