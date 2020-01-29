@@ -46,6 +46,7 @@
 import BackIcon from '@theme/components/icons/BackIcon'
 import FixedHead from '@theme/components/FixedHead'
 import { getDistanceToNow, getDistanceToNowUnixNano } from '@theme/utils/compare-time'
+import { sortPosts } from '@theme/utils/sort-posts'
 import { parseISO } from 'date-fns'
 import compareDesc from 'date-fns/compareDesc'
 import _ from 'lodash'
@@ -65,23 +66,22 @@ export default {
       }
       return this.pages[this.index + 1]
     },
+
     nextPage () {
       if (this.index === 0) {
         return null
       }
       return this.pages[this.index - 1]
     },
+
     index () {
       return _.findIndex(this.pages, obj => {
         return obj.key === this.$page.key
       })
     },
+
     pages () {
-      return this.$site.pages.filter(item => {
-        return item.id === 'home'
-      }).sort((a, b) => {
-        return compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date))
-      })
+      return sortPosts(this.$site.pages, 0, this.$site.pages.length, true)
     }
   },
 

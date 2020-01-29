@@ -71,11 +71,10 @@
 
 <script>
 import { getDistanceToNow } from '@theme/utils/compare-time'
+import { sortPosts } from '@theme/utils/sort-posts'
 import Tags from '@theme/components/icons/Tags'
 import Pagination from '@theme/components/Pagination'
 import FixedHead from '@theme/components/FixedHead'
-import compareDesc from 'date-fns/compareDesc'
-import { parseISO } from 'date-fns'
 
 export default {
   name: 'Home',
@@ -101,31 +100,7 @@ export default {
 
   computed: {
     posts () {
-      const pages = this.$site.pages.filter(page => {
-        return page.id === 'home'
-      }).sort((a, b) => {
-        return compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date))
-      })
-
-      const pagesPinned = pages.filter(page => {
-        return 'pinned' in page.frontmatter
-      }).sort((a, b) => {
-        if (a.frontmatter.pinned < b.frontmatter.pinned) {
-          return -1
-        }
-        return 1
-      })
-
-      const pagesUnpinned = pages.filter(page => {
-        return !('pinned' in page.frontmatter)
-      })
-
-      const current = this.$pagination.paginationIndex * this.$themeConfig.pagination.lengthPerPage
-
-      return pagesPinned.concat(pagesUnpinned).slice(
-        current,
-        current + this.$themeConfig.pagination.lengthPerPage
-      )
+      return sortPosts(this.$site.pages, this.$pagination.paginationIndex, this.$themeConfig.pagination.lengthPerPage, true)
     }
   }
 }

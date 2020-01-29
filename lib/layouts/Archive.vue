@@ -82,6 +82,7 @@ import getYear from 'date-fns/getYear'
 import compareDesc from 'date-fns/compareDesc'
 import Tags from '@theme/components/icons/Tags'
 import _ from 'lodash'
+import { sortPosts } from '@theme/utils/sort-posts'
 
 export default {
   name: 'Archive',
@@ -179,11 +180,7 @@ export default {
     },
 
     posts () {
-      return this.$site.pages.filter(item => {
-        return item.id === 'home'
-      }).sort((a, b) => {
-        return compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date))
-      })
+      return sortPosts(this.$site.pages, 0, this.$site.pages.length)
     },
 
     year () {

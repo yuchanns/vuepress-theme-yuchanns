@@ -76,10 +76,9 @@
 
 <script>
 import { getDistanceToNow } from '@theme/utils/compare-time'
+import { sortPosts } from '@theme/utils/sort-posts'
 import Tags from '@theme/components/icons/Tags'
 import FixedHead from '@theme/components/FixedHead'
-import compareDesc from 'date-fns/compareDesc'
-import { parseISO } from 'date-fns'
 
 export default {
   name: 'TagItem',
@@ -95,10 +94,7 @@ export default {
       return lang.tagItemTip(this.$currentTags.pages.length)
     },
     posts () {
-      const posts = this.$currentTags.pages
-      return posts.sort((a, b) => {
-        return compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date))
-      })
+      return sortPosts(this.$currentTags.pages, 0, this.$currentTags.pages.length)
     }
   },
 
