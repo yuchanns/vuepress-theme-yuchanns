@@ -98,7 +98,6 @@
 <script>
 import Tags from '@theme/components/icons/Tags'
 import SearchBox from '@SearchBox'
-import '@github/details-menu-element'
 
 export default {
   name: 'TheHeader',
@@ -106,6 +105,9 @@ export default {
   components: {
     Tags,
     SearchBox
+  },
+  mounted () {
+    require('@github/details-menu-element')
   }
 }
 </script>
