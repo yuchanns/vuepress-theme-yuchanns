@@ -193,7 +193,7 @@ img
     &-hover:hover
       color #fff
       text-decoration none
-      background-color #0366d6
+      background-color $accentColor
       outline none
     a
       color inherit
