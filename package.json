@@ -42,6 +42,7 @@
     "vuepress": "^1.2.0"
   },
   "dependencies": {
+    "@github/details-menu-element": "^1.0.8",
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "@vuepress/plugin-blog": "^1.9.2",
     "@vuepress/plugin-last-updated": "^1.2.0",

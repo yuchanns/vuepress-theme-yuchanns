@@ -46,6 +46,16 @@ module.exports = {
   themeConfig: {
     lang: 'zh-CN',
 
+    author: {
+      name: 'yuchanns',
+      avatar: '/yuchanns.jpg',
+      desc: '面向Github编程',
+      job: '后端工程师',
+      location: '深圳',
+      email: 'airamusume@gmail.com',
+      link: 'yuchanns.org'
+    },
+
     pagination: {
       lengthPerPage: 5
     },
