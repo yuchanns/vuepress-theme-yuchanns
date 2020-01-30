@@ -84,7 +84,8 @@ module.exports = {
     },
 
     categories: {
-      docs: { color: '#e34c26', desc: 'Showing the usage of vuepress-theme-yuchanns.展示本主题的使用方法' }
+      docs: { color: '#e34c26', desc: 'Showing the usage of vuepress-theme-yuchanns.展示本主题的使用方法', logo: '/images/categories/document.jpg' },
+      dev: { logo: '/images/categories/development.png', desc: 'Display of development plan.记录和展示开发计划' }
     }
   }
 }

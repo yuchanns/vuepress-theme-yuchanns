@@ -1,7 +1,7 @@
 ---
 title: Markdown-it Demo
 date: 2020-01-29 19:25
-category: Example
+category: example
 tags:
   - markdown
 pinned: 3

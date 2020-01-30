@@ -1,6 +1,6 @@
 # VuePress Blog Theme yuchanns
 
-> release v0.0.15
+> release v0.0.16
 
 STATUS: **WIP**
 
@@ -14,7 +14,6 @@ STATUS: **WIP**
 * [中文](https://vuepress-theme-yuchanns.yuchanns.xyz/posts/2019/12/31/guide/)
 
 ## Deployed On
-* [github pages](http://demo.yuchanns.xyz)
 * [netlify](https://vuepress-theme-yuchanns.yuchanns.xyz/)
 
 ## Fetch
@@ -40,11 +39,12 @@ yarn dev
 - [x] Internationalization
 
 ## Preview
-![home](./preview/home.png "home")
-![post](./preview/post.png "post")
-![archive](./preview/archive.png "archive")
-![categories](./preview/categories.png "categories")
-![category](./preview/category.png "category")
+![home](./preview/preview_01.png "home")
+![archive](./preview/preview_02.png "archive")
+![categories](./preview/preview_03.png "categories")
+![category](./preview/preview_04.png "category")
+![post](./preview/preview_05.png "post")
+![search](./preview/preview_06.png "search")
 
 ## LICENSE
 [MIT](https://github.com/yuchanns/vuepress-theme-yuchanns/blob/master/LICENSE)© @[yuchanns](https://github.com/yuchanns)
