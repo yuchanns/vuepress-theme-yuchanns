@@ -43,6 +43,8 @@
   },
   "dependencies": {
     "@github/details-menu-element": "^1.0.8",
+    "@vssue/api-github-v3": "^1.4.0",
+    "@vssue/vuepress-plugin-vssue": "^1.4.2",
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "@vuepress/plugin-blog": "^1.9.2",
     "@vuepress/plugin-last-updated": "^1.2.0",

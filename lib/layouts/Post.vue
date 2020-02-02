@@ -36,6 +36,7 @@
           <div class="Box-body">
             <Content/>
           </div>
+          <Vssue title="Vssue Demo" />
         </div>
       </div>
     </div>
