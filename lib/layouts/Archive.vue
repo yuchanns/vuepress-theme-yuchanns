@@ -77,9 +77,9 @@
 </template>
 <script>
 import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
-import { parseISO, format } from 'date-fns'
-import getYear from 'date-fns/getYear'
-import compareDesc from 'date-fns/compareDesc'
+import { format } from 'date-fns'
+import getYear from 'date-fns/get_year'
+import compareDesc from 'date-fns/compare_desc'
 import Tags from '@theme/components/icons/Tags'
 import _ from 'lodash'
 import { sortPosts } from '@theme/utils/sort-posts'
@@ -94,8 +94,8 @@ export default {
 
   data () {
     const date = new Date()
-    const thisYear = parseInt(format(date, 'yyyy'))
-    const thisDay = format(date, 'yyyy-MM-dd')
+    const thisYear = parseInt(format(date, 'YYYY'))
+    const thisDay = format(date, 'YYYY-M-DD')
 
     return {
       rangeColor: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
@@ -109,15 +109,15 @@ export default {
 
   filters: {
     formatMonth (date) {
-      return format(parseISO(date), 'LLLL')
+      return format(date, 'MMMM')
     },
 
     formatYear (date) {
-      return format(parseISO(date), 'yyyy')
+      return format(date, 'YYYY')
     },
 
     formatDate (date) {
-      return format(parseISO(date), 'MM-dd')
+      return format(date, 'MM-DD')
     }
   },
 
@@ -149,10 +149,10 @@ export default {
         return this.timeItems[this.selectedYear]
       }
 
-      const startDate = parseISO(this.timeTitles[1] + format(this.todayISO, '-MM-dd'))
+      const startDate = this.timeTitles[1] + format(this.todayISO, '-M-DD')
 
       return this.posts.filter(post => {
-        return compareDesc(parseISO(post.frontmatter.date), startDate) <= 0
+        return compareDesc(post.frontmatter.date, startDate) <= 0
       })
     },
 
@@ -160,7 +160,7 @@ export default {
       const heatDays = {}
 
       this.posts.forEach(post => {
-        const date = format(parseISO(post.frontmatter.date), 'yyyy-MM-dd')
+        const date = format(post.frontmatter.date, 'YYYY-M-DD')
         const title = post.title
         if (date in heatDays) {
           heatDays[date].push(title)
@@ -186,7 +186,7 @@ export default {
     year () {
       return {
         end: getYear(this.todayISO),
-        start: getYear(parseISO(this.posts[this.posts.length - 1].frontmatter.date))
+        start: getYear(this.posts[this.posts.length - 1].frontmatter.date)
       }
     },
 
@@ -199,8 +199,8 @@ export default {
 
       this.timeTitles.forEach(year => {
         timelines[year] = this.posts.filter(item => {
-          const itemDate = parseISO(item.frontmatter.date)
-          return (compareDesc(parseISO(year.toString()), itemDate) > -1) && (compareDesc(parseISO((year + 1).toString()), itemDate) < 0)
+          const itemDate = item.frontmatter.date
+          return (compareDesc(year.toString(), itemDate) > -1) && (compareDesc((year + 1).toString(), itemDate) < 0)
         })
       })
 
@@ -210,7 +210,7 @@ export default {
     monthItems () {
       const monthItems = {}
       this.postsLastYear.forEach(post => {
-        const yearMonth = format(parseISO(post.frontmatter.date), 'yyyy-MM')
+        const yearMonth = format(post.frontmatter.date, 'YYYY-M')
         if (yearMonth in monthItems) {
           monthItems[yearMonth].push(post)
         } else {

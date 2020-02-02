@@ -56,6 +56,14 @@ module.exports = {
       link: 'yuchanns.org'
     },
 
+    vssue: {
+      platform: 'github',
+      owner: 'yuchanns',
+      repo: 'vuepress-theme-yuchanns',
+      clientId: '4353f46e18ac2be258ba',
+      clientSecret: 'f00fc887083baac054d4483d348cf0215b206e27'
+    },
+
     pagination: {
       lengthPerPage: 5
     },

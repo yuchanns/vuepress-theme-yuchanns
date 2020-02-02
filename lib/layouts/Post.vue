@@ -17,7 +17,7 @@
               <span class="lh-default v-align-middle link-gray">{{ $themeConfig.lang.createdAt }} {{ formatDate($page.frontmatter.date) }}</span>
             </div>
             <div class="no-wrap d-flex flex-self-start flex-items-baseline">
-              <span class="mr-1 f6 link-gray">{{ $themeConfig.lang.updatedAt }} {{ $page.lastUpdated ? formatDateUnixNano($page.lastUpdated) : formatDate($page.frontmatter.date) }}</span>
+              <span class="mr-1 f6 link-gray">{{ $themeConfig.lang.updatedAt }} {{ $page.lastUpdated ? formatDate($page.lastUpdated) : formatDate($page.frontmatter.date) }}</span>
             </div>
           </div>
           <div class="Box-body d-flex flex-items-center flex-auto f6 border-bottom-0 flex-wrap flex-justify-between">
@@ -36,7 +36,8 @@
           <div class="Box-body">
             <Content/>
           </div>
-          <Vssue title="Vssue Demo" />
+          <Vssue :title="$page.title"
+           v-if="$themeConfig.vssue" />
         </div>
       </div>
     </div>
@@ -46,7 +47,7 @@
 <script>
 import BackIcon from '@theme/components/icons/BackIcon'
 import FixedHead from '@theme/components/FixedHead'
-import { getDistanceToNow, getDistanceToNowUnixNano } from '@theme/utils/compare-time'
+import { getDistanceToNow } from '@theme/utils/compare-time'
 import { sortPosts } from '@theme/utils/sort-posts'
 import _ from 'lodash'
 
@@ -87,10 +88,6 @@ export default {
   methods: {
     formatDate (date) {
       return getDistanceToNow(date, this.$lang)
-    },
-
-    formatDateUnixNano (timestamp) {
-      return getDistanceToNowUnixNano(timestamp, this.$lang)
     }
   }
 }

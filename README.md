@@ -1,6 +1,6 @@
 # VuePress Blog Theme yuchanns
 
-> release v0.0.16
+> release v0.0.18
 
 STATUS: **WIP**
 
@@ -37,6 +37,7 @@ yarn dev
 - [x] Tags
 - [x] ArchiveHeatmap
 - [x] Internationalization
+- [x] Comments
 
 ## Preview
 ![home](./preview/preview_01.png "home")

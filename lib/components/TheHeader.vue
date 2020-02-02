@@ -43,52 +43,54 @@
               :alt="`@${$themeConfig.author.name}`">
             <span class="dropdown-caret"></span>
           </summary>
-          <details-menu class="dropdown-menu dropdown-menu-sw mt-2" style="width: 180px" role="menu">
-            <div class="header-nav-current-user">
-              <span class="px-3 pt-2 pb-2 mb-n2 mt-n2 mt-n1 d-block">
-                Owned by
-                <strong class="css-truncate-target">{{ $themeConfig.author.name }}</strong>
-              </span>
-            </div>
-            <div role="none" class="dropdown-divider"></div>
-            <div class="pl-3 pr-3 pb-1">
-              <img :src="$themeConfig.author.avatar" :alt="`@${$themeConfig.author.name}`" style="width:100%; height: 100%">
-            </div>
-            <div role="none" class="dropdown-divider"></div>
-            <div class="pl-3 pr-3 f6 user-status-container pb-1">
-              <div class="user-status-compact rounded-1 px-2 py-1 mt-2 border">
-                <details class="details-reset details-overlay details-overlay-dark">
-                  <summary>
-                    <div class="d-flex">
-                      <div class="d-inline-block v-align-middle css-truncate css-truncate-target user-status-message-wrapper f6"
-                        style="line-height: 20px">
-                        <div class="d-inline-block text-gray-dark v-align-text-top text-left">
-                          <span>{{ $themeConfig.author.desc || 'Welcome' }}</span>
+          <ClientOnly>
+            <details-menu class="dropdown-menu dropdown-menu-sw mt-2" style="width: 180px" role="menu">
+              <div class="header-nav-current-user">
+                <span class="px-3 pt-2 pb-2 mb-n2 mt-n2 mt-n1 d-block">
+                  Owned by
+                  <strong class="css-truncate-target">{{ $themeConfig.author.name }}</strong>
+                </span>
+              </div>
+              <div role="none" class="dropdown-divider"></div>
+              <div class="pl-3 pr-3 pb-1">
+                <img :src="$themeConfig.author.avatar" :alt="`@${$themeConfig.author.name}`" style="width:100%; height: 100%">
+              </div>
+              <div role="none" class="dropdown-divider"></div>
+              <div class="pl-3 pr-3 f6 user-status-container pb-1">
+                <div class="user-status-compact rounded-1 px-2 py-1 mt-2 border">
+                  <details class="details-reset details-overlay details-overlay-dark">
+                    <summary>
+                      <div class="d-flex">
+                        <div class="d-inline-block v-align-middle css-truncate css-truncate-target user-status-message-wrapper f6"
+                          style="line-height: 20px">
+                          <div class="d-inline-block text-gray-dark v-align-text-top text-left">
+                            <span>{{ $themeConfig.author.desc || 'Welcome' }}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </summary>
-                </details>
+                    </summary>
+                  </details>
+                </div>
               </div>
-            </div>
-            <div role="none" class="dropdown-divider"></div>
-            <span class="dropdown-item" v-if="'job' in $themeConfig.author">
-              <tags type="briefcase" style="margin-right: 2px; margin-bottom: 2px" />
-              <span>{{ $themeConfig.author.job }}</span>
-            </span>
-            <span class="dropdown-item" v-if="'location' in $themeConfig.author">
-              <tags type="location" style="margin-right: 2px; margin-bottom: 2px" />
-              <span>{{ $themeConfig.author.location }}</span>
-            </span>
-            <span class="dropdown-item dropdown-item-hover" v-if="'email' in $themeConfig.author">
-              <tags type="email" style="margin-right: 2px; margin-bottom: 2px" />
-              <a :href="`mailto:${$themeConfig.author.email}`">{{ $themeConfig.author.email }}</a>
-            </span>
-            <span class="dropdown-item dropdown-item-hover" v-if="'link' in $themeConfig.author">
-              <tags type="link" style="margin-right: 2px; margin-bottom: 2px" />
-              <a :href="`//${$themeConfig.author.link}`">{{ $themeConfig.author.link }}</a>
-            </span>
-          </details-menu>
+              <div role="none" class="dropdown-divider"></div>
+              <span class="dropdown-item" v-if="'job' in $themeConfig.author">
+                <tags type="briefcase" style="margin-right: 2px; margin-bottom: 2px" />
+                <span>{{ $themeConfig.author.job }}</span>
+              </span>
+              <span class="dropdown-item" v-if="'location' in $themeConfig.author">
+                <tags type="location" style="margin-right: 2px; margin-bottom: 2px" />
+                <span>{{ $themeConfig.author.location }}</span>
+              </span>
+              <span class="dropdown-item dropdown-item-hover" v-if="'email' in $themeConfig.author">
+                <tags type="email" style="margin-right: 2px; margin-bottom: 2px" />
+                <a :href="`mailto:${$themeConfig.author.email}`">{{ $themeConfig.author.email }}</a>
+              </span>
+              <span class="dropdown-item dropdown-item-hover" v-if="'link' in $themeConfig.author">
+                <tags type="link" style="margin-right: 2px; margin-bottom: 2px" />
+                <a :href="`//${$themeConfig.author.link}`">{{ $themeConfig.author.link }}</a>
+              </span>
+            </details-menu>
+          </ClientOnly>
         </details>
       </div>
     </header>

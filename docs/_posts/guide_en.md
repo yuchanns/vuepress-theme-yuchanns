@@ -28,7 +28,7 @@ Feel free to open an request [issue](https://github.com/yuchanns/vuepress-theme-
 
 ## Quick Start
 :::danger Attention
-Theme version is now on <mark>v0.0.16</mark> and still work in progress. There maybe breakable changes. Do not use it in product environment.
+Theme version is now on <mark>v0.0.18</mark> and still work in progress. There maybe breakable changes. Do not use it in product environment.
 :::
 ### Newbee
 First time with `Vuepress`? Learn how to use it referring by [Official Docs](https://vuepress.vuejs.org)
@@ -79,6 +79,7 @@ This theme implemented only basic features for now. Still you can find something
 * Tags
 * Archive
 * Internationalization
+* Comments
 
 #### Special
 * Archive Heatmap (contribution of github style)
@@ -116,6 +117,14 @@ module.exports = {
       location: '深圳',
       email: 'airamusume@gmail.com',
       link: 'yuchanns.org'
+    },
+
+    vssue: {
+      platform: 'github',
+      owner: 'your github username',
+      repo: 'your github repository',
+      clientId: 'your oAuth App clientId',
+      clientSecret: 'your oAuth App clientSecret'
     },
 
     pagination: {
@@ -190,6 +199,9 @@ Coloring in `color`, describing in `desc` and providing logo in `logo`. Now shar
 
 ### Pinned Posts
 You can pinned posts by adding <mark>pinned: number</mark> in the `frontmatter` of posts. Numbers are used for sorting pinned posts ascending order.
+
+### Comments
+Configuring with `themeConfig.vssue`. More info visit [Vssue](https://vssue.js.org/guide/).
 
 ## Thanks
 * [Vuepress](https://github.com/vuejs/vuepress)
