@@ -243,11 +243,11 @@ mark
   padding .3em .9em
   margin 0 .5em .5em 0
   white-space nowrap
-  background-color #f1f8ff
+  background-color lighten($accentColor, 92%)
   border-radius 3px
   &-link:hover
     text-decoration none
-    background-color #def
+    background-color lighten($accentColor, 83%)
   &-container
     height 30px
     overflow hidden
