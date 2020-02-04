@@ -22,6 +22,6 @@ export default {
   line-height 1
   font-weight bold
   &:hover
-    background-color rgba(29 161 242 0.1)
+    background-color lighten($accentColor, 88.7%)
     border-radius 50%
 </style>
