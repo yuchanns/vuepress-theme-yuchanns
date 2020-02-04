@@ -137,7 +137,7 @@ export default {
       border-bottom-left-radius 2px
 
 .bg-blue-light
-  background-color #f1f8ff
+  background-color lighten($accentColor, 95.2%)
 .lh-default
   line-height 1.5
 .v-align-middle
