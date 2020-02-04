@@ -120,8 +120,9 @@ thead
   border-color inherit
 
 mark
-  background-color #fcf8e3
+  background-color lighten($accentColor, 88.7%)
   padding .2em
+  color $accentColor
 
 .width
   &-full
