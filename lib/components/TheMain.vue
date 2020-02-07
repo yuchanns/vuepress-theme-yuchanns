@@ -1,29 +1,36 @@
 <template>
   <div>
     <TransitionFadeSlide :direction="direction">
-      <DefaultGlobalLayout :key="$page.path" />
+      <component
+        :is="layout"
+        :key="$page.path">
+      </component>
     </TransitionFadeSlide>
   </div>
 </template>
 
 <script>
 import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
-import GlobalLayout from '@app/components/GlobalLayout.vue'
+import Vue from 'vue'
 
 export default {
   name: 'TheMain',
 
   components: {
-    DefaultGlobalLayout: GlobalLayout,
     TransitionFadeSlide
   },
 
   computed: {
-    direction () {
-      if (this.$page.frontmatter.layout === 'Post') {
-        return 'x'
+    layout () {
+      const layout = this.$page.frontmatter.layout
+      if (layout && (this.$vuepress.getLayoutAsyncComponent(layout) || this.$vuepress.getVueComponent(layout))) {
+        return Vue.component(layout)
       }
-      return 'y'
+      return 'NotFound'
+    },
+
+    direction () {
+      return this.$page.frontmatter.layout === 'Post' ? 'x' : 'y'
     }
   }
 }
