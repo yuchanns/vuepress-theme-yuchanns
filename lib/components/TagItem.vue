@@ -70,6 +70,7 @@
           </article>
         </div>
       </div>
+      <Pagination />
     </div>
   </div>
 </template>
@@ -79,13 +80,15 @@ import { getDistanceToNow } from '@theme/utils/compare-time'
 import { sortPosts } from '@theme/utils/sort-posts'
 import Tags from '@theme/components/icons/Tags'
 import FixedHead from '@theme/components/FixedHead'
+import Pagination from '@theme/components/Pagination'
 
 export default {
   name: 'TagItem',
 
   components: {
     Tags,
-    FixedHead
+    FixedHead,
+    Pagination
   },
 
   computed: {
@@ -94,7 +97,7 @@ export default {
       return lang.tagItemTip(this.$currentTags.pages.length)
     },
     posts () {
-      return sortPosts(this.$currentTags.pages, 0, this.$currentTags.pages.length)
+      return sortPosts(this.$currentTags.pages, this.$pagination.paginationIndex, this.$themeConfig.pagination.lengthPerPage)
     }
   },
 

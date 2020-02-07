@@ -1,34 +1,21 @@
 <template>
   <div>
     <TransitionFadeSlide>
-      <component
-        :is="layout"
-        :key="$page.path"></component>
+      <DefaultGlobalLayout />
     </TransitionFadeSlide>
   </div>
 </template>
 
 <script>
 import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
-import Vue from 'vue'
+import GlobalLayout from '@app/components/GlobalLayout.vue'
 
 export default {
   name: 'TheMain',
 
   components: {
+    DefaultGlobalLayout: GlobalLayout,
     TransitionFadeSlide
-  },
-
-  computed: {
-    layout () {
-      const layout = this.$page.frontmatter.layout
-
-      if (layout && (this.$vuepress.getLayoutAsyncComponent(layout) || this.$vuepress.getVueComponent(layout))) {
-        return Vue.component(layout)
-      }
-
-      return 'NotFound'
-    }
   }
 }
 </script>
