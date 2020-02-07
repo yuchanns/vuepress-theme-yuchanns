@@ -1,7 +1,7 @@
 <template>
   <div>
-    <TransitionFadeSlide>
-      <DefaultGlobalLayout />
+    <TransitionFadeSlide :direction="direction">
+      <DefaultGlobalLayout :key="$page.path" />
     </TransitionFadeSlide>
   </div>
 </template>
@@ -16,6 +16,15 @@ export default {
   components: {
     DefaultGlobalLayout: GlobalLayout,
     TransitionFadeSlide
+  },
+
+  computed: {
+    direction () {
+      if (this.$page.frontmatter.layout === 'Post') {
+        return 'x'
+      }
+      return 'y'
+    }
   }
 }
 </script>
