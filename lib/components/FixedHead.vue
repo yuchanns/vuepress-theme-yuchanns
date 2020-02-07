@@ -3,7 +3,8 @@
     <div class="pagehead-details-cotainer clearfix container-lg p-responsive d-lg-block">
       <h1>
         <router-link :to="router" v-if="back"><BackIcon /></router-link>
-        <strong :class="{ 'text-capitalize': !uppercase, 'text-uppercase': uppercase }">{{ title }}</strong>
+        <!-- <strong :class="{ 'text-capitalize': !uppercase, 'text-uppercase': uppercase }">{{ title }}</strong> -->
+        <strong>{{ title }}</strong>
       </h1>
     </div>
   </div>

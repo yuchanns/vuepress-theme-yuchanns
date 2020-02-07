@@ -64,6 +64,10 @@ module.exports = {
       clientSecret: 'f00fc887083baac054d4483d348cf0215b206e27'
     },
 
+    sitemap: {
+      hostname: 'https://vuepress-theme-yuchanns.yuchanns.xyz'
+    },
+
     pagination: {
       lengthPerPage: 5
     },

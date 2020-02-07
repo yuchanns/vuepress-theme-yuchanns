@@ -21,8 +21,8 @@
             </div>
           </div>
           <div class="Box-body d-flex flex-items-center flex-auto f6 border-bottom-0 flex-wrap flex-justify-between">
-            <span v-if="prevPage" class="text-capitalize">{{ $themeConfig.lang.prev }}: <router-link :to="prevPage.path">{{ prevPage.title }}</router-link></span>
-            <span v-if="nextPage" class="text-capitalize">{{ $themeConfig.lang.next }}: <router-link :to="nextPage.path">{{ nextPage.title }}</router-link></span>
+            <span v-if="prevPage">{{ $themeConfig.lang.prev }}: <router-link :to="prevPage.path">{{ prevPage.title }}</router-link></span>
+            <span v-if="nextPage">{{ $themeConfig.lang.next }}: <router-link :to="nextPage.path">{{ nextPage.title }}</router-link></span>
           </div>
         </div>
         <div class="Box mt-3 position-relative">
@@ -35,6 +35,10 @@
           </div>
           <div class="Box-body">
             <Content/>
+          </div>
+          <div class="Box-body d-flex flex-items-center flex-auto f6 flex-wrap flex-justify-between">
+            <span v-if="prevPage">{{ $themeConfig.lang.prev }}: <router-link :to="prevPage.path">{{ prevPage.title }}</router-link></span>
+            <span v-if="nextPage">{{ $themeConfig.lang.next }}: <router-link :to="nextPage.path">{{ nextPage.title }}</router-link></span>
           </div>
           <Vssue :title="$page.title"
            v-if="$themeConfig.vssue" />

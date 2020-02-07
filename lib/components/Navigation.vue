@@ -21,7 +21,7 @@
           <li class="lh-condensed mb-3"
             v-for="(category, key) in categories"
             :key="key">
-            <router-link :to="category.path" class="link-gray text-capitalize text-capitalize">{{ category.title }}</router-link>
+            <router-link :to="category.path" class="link-gray">{{ category.title }}</router-link>
           </li>
         </ul>
       </div>
@@ -32,7 +32,7 @@
           <li class="lh-condensed mb-3"
             v-for="(tag, key) in tags"
             :key="key">
-            <router-link :to="tag.path" class="link-gray text-capitalize text-capitalize">{{ tag.title }}</router-link>
+            <router-link :to="tag.path" class="link-gray">{{ tag.title }}</router-link>
           </li>
         </ul>
         </ul>
