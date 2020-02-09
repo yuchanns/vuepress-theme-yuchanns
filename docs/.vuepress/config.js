@@ -14,7 +14,7 @@ module.exports = {
 
   locales: {
     '/': {
-      lang: 'zh-CN'
+      lang: 'en-US'
     }
   },
 
@@ -44,7 +44,7 @@ module.exports = {
   },
 
   themeConfig: {
-    lang: 'zh-CN',
+    lang: 'en-US',
 
     author: {
       name: 'yuchanns',
