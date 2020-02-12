@@ -27,9 +27,6 @@ Feel free to open an request [issue](https://github.com/yuchanns/vuepress-theme-
 * [yuchanns'Atelier](https://yuchanns.org)
 
 ## Quick Start
-:::danger Attention
-Theme version is now on <mark>v0.0.24</mark> and still work in progress. There maybe breakable changes. Do not use it in product environment.
-:::
 ### Newbee
 First time with `Vuepress`? Learn how to use it referring by [Official Docs](https://vuepress.vuejs.org)
 
