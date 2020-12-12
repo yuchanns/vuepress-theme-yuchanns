@@ -6,11 +6,7 @@ module.exports = {
       files: ['*.ts', '*.vue'],
       extends: 'vuepress-typescript',
       parserOptions: {
-        project: [
-          'docs/tsconfig.json',
-          'vuepress-next/packages/**/tsconfig.json',
-          'theme-yuchanns/tsconfig.json',
-        ],
+        project: ['docs/tsconfig.json', 'theme-yuchanns/tsconfig.json'],
       },
       rules: {
         '@typescript-eslint/ban-ts-comment': 'off',
