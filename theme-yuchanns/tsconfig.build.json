@@ -1,0 +1,40 @@
+{
+  "extends": "../tsconfig.base.json",
+  "references": [
+    {
+      "path": "../vuepress-next/packages/@vuepress/client/tsconfig.build.json"
+    },
+    { "path": "../vuepress-next/packages/@vuepress/core/tsconfig.build.json" },
+    {
+      "path": "../vuepress-next/packages/@vuepress/plugin-active-header-links/tsconfig.build.json"
+    },
+    {
+      "path": "../vuepress-next/packages/@vuepress/plugin-back-to-top/tsconfig.build.json"
+    },
+    {
+      "path": "../vuepress-next/packages/@vuepress/plugin-container/tsconfig.build.json"
+    },
+    {
+      "path": "../vuepress-next/packages/@vuepress/plugin-docsearch/tsconfig.build.json"
+    },
+    {
+      "path": "../vuepress-next/packages/@vuepress/plugin-git/tsconfig.build.json"
+    },
+    {
+      "path": "../vuepress-next/packages/@vuepress/plugin-medium-zoom/tsconfig.build.json"
+    },
+    {
+      "path": "../vuepress-next/packages/@vuepress/plugin-nprogress/tsconfig.build.json"
+    },
+    {
+      "path": "../vuepress-next/packages/@vuepress/plugin-palette-stylus/tsconfig.build.json"
+    },
+    {
+      "path": "../vuepress-next/packages/@vuepress/shared/tsconfig.build.json"
+    },
+    { "path": "../vuepress-next/packages/@vuepress/utils/tsconfig.build.json" },
+    { "path": "./tsconfig.esm.json" },
+    { "path": "./tsconfig.cjs.json" }
+  ],
+  "files": []
+}
